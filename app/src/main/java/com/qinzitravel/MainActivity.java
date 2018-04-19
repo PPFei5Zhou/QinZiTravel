@@ -1,13 +1,13 @@
 package com.qinzitravel;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.activity_collector.BaseActivity;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +33,20 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.addItem(hotel);
         bottomNavigation.addItem(user);
 
+        // Customize notification (title, background, typeface)
+        bottomNavigation.setNotificationBackgroundColor(Color.parseColor("#F63D2B"));
+
+        // Change colors
+        bottomNavigation.setAccentColor(Color.parseColor("#03A9F4"));
+
         // Manage titles
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.SHOW_WHEN_ACTIVE);
 
         // Set background color
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#FEFEFE"));
+
+        // Set current item programmatically
+        bottomNavigation.setCurrentItem(4);
+
     }
 }

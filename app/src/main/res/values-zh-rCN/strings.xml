@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">亲子游</string>
+    <string name="navigationSight" translatable="false">景点</string>
+    <string name="navigationTravel" translatable="false">出行</string>
+    <string name="navigationRepast" translatable="false">餐饮</string>
+    <string name="navigationHotel" translatable="false">酒店</string>
+    <string name="navigationUser" translatable="false">个人中心</string>
+</resources>
