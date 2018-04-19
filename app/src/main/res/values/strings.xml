@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QinZiTravel</string>
+    <string name="navigationSight">Sight</string>
+    <string name="navigationTravel">Travel</string>
+    <string name="navigationRepast">Repast</string>
+    <string name="navigationHotel">Hotel</string>
+    <string name="navigationUser">User</string>
+</resources>
