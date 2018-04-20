@@ -9,6 +9,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 
 public class MainActivity extends BaseActivity {
 
+    private AHBottomNavigation bottomNavigation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +19,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void InitUi() {
-        AHBottomNavigation bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
+        bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
 
         // Create Item
         AHBottomNavigationItem sight = new AHBottomNavigationItem(R.string.navigationSight, R.drawable.ic_navigation_sight, R.color.colorNavigation);
@@ -46,7 +48,7 @@ public class MainActivity extends BaseActivity {
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#FEFEFE"));
 
         // Set current item programmatically
-        bottomNavigation.setCurrentItem(4);
+        bottomNavigation.setCurrentItem(0);
 
     }
 }
