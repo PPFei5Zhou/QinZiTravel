@@ -6,10 +6,17 @@ import android.os.Bundle;
 import com.activity_collector.BaseActivity;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
+import com.fragment_container.FragmentContainer;
+import com.viewPagerAdapter.ViewPagerAdapter;
 
 public class MainActivity extends BaseActivity {
 
+    private FragmentContainer currentFragment;
+    private ViewPagerAdapter adapter;
     private AHBottomNavigation bottomNavigation;
+
+    private AHBottomNavigationViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +26,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void InitUi() {
-        bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
+        bottomNavigation = findViewById(R.id.bottom_navigation);
+        viewPager = findViewById(R.id.view_pager);
 
         // Create Item
         AHBottomNavigationItem sight = new AHBottomNavigationItem(R.string.navigationSight, R.drawable.ic_navigation_sight, R.color.colorNavigation);
@@ -50,5 +58,39 @@ public class MainActivity extends BaseActivity {
         // Set current item programmatically
         bottomNavigation.setCurrentItem(0);
 
+        bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
+            @Override
+            public boolean onTabSelected(int position, boolean wasSelected) {
+
+                if (currentFragment == null) {
+                    currentFragment = adapter.getCurrentFragment();
+                }
+
+                if (wasSelected) {
+                    currentFragment.refresh();
+                    return true;
+                }
+
+                if (currentFragment != null) {
+                    currentFragment.willBeHidden();
+                }
+
+                viewPager.setCurrentItem(position, false);
+
+                if (currentFragment == null) {
+                    return true;
+                }
+
+                currentFragment = adapter.getCurrentFragment();
+                currentFragment.willBeDisplayed();
+
+                return true;
+            }
+        });
+        viewPager.setOffscreenPageLimit(4);
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
+        currentFragment = adapter.getCurrentFragment();
     }
 }
