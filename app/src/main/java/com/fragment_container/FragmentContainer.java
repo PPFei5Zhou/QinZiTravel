@@ -3,6 +3,7 @@ package com.fragment_container;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,12 +13,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
+import com.fragment_user.UserAdapter;
+import com.fragment_user.UserEntity;
 import com.qinzitravel.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FragmentContainer extends Fragment {
-
     private FrameLayout fragmentContainer;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -60,18 +63,24 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initUser(View view) {
+        UserEntity[] users = {new UserEntity("user info", R.drawable.ic_user_info),
+                new UserEntity("order", R.drawable.ic_user_order),
+                new UserEntity("setting", R.drawable.ic_user_setting),
+                new UserEntity("exit", R.drawable.ic_user_exit)};
+
+        List<UserEntity> userEntityList = new ArrayList<>();
+
+        UserAdapter adapter = new UserAdapter(userEntityList);
+
+        userEntityList.add(users[0]);
+        userEntityList.add(users[1]);
+        userEntityList.add(users[2]);
+        userEntityList.add(users[3]);
+
         fragmentContainer = view.findViewById(R.id.fragment_user);
         recyclerView = view.findViewById(R.id.fragment_user_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
-
-        ArrayList<String> itemsData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-        }
-
-        FragmentAdapter adapter = new FragmentAdapter(itemsData);
         recyclerView.setAdapter(adapter);
     }
 
