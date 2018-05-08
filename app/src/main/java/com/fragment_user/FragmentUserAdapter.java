@@ -17,26 +17,24 @@ import java.util.List;
  * Created by zhou on 18-5-3.
  */
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
+public class FragmentUserAdapter extends RecyclerView.Adapter<FragmentUserAdapter.ViewHolder> {
 
     private Context mContext;
 
-    private List<UserEntity> mUserList;
+    private List<FragmentUserContainer> mUserList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        CardView cardView;
         ImageView user_image;
         TextView user_text;
 
         public ViewHolder(View view) {
             super(view);
-            cardView = (CardView) view;
             user_image = view.findViewById(R.id.user_image);
             user_text = view.findViewById(R.id.user_text);
         }
     }
 
-    public UserAdapter(List<UserEntity> userList) {
+    public FragmentUserAdapter(List<FragmentUserContainer> userList) {
          mUserList = userList;
     }
 
@@ -52,9 +50,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        UserEntity userEntity = mUserList.get(position);
-        holder.user_image.setImageResource(userEntity.getImageId());
-        holder.user_text.setText(userEntity.getUser_text());
+        FragmentUserContainer fragmentUserContainer = mUserList.get(position);
+        holder.user_image.setImageResource(fragmentUserContainer.getImageId());
+        holder.user_text.setText(fragmentUserContainer.getUser_text());
     }
 
     @Override

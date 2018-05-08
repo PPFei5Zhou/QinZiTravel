@@ -4,12 +4,12 @@ package com.fragment_user;
  * Created by zhou on 18-5-3.
  */
 
-public class UserEntity {
+public class FragmentUserContainer {
     private String user_text;
 
     private int imageId;
 
-    public UserEntity(String user_text, int imageId) {
+    public FragmentUserContainer(String user_text, int imageId) {
         this.user_text = user_text;
         this.imageId = imageId;
     }

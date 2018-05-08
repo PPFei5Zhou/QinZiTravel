@@ -3,6 +3,7 @@ package com.fragment_container;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,17 +14,22 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.fragment_user.UserAdapter;
-import com.fragment_user.UserEntity;
+import com.Entity.TestItem;
+import com.fragment_user.FragmentUserAdapter;
+import com.fragment_user.FragmentUserContainer;
 import com.qinzitravel.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class FragmentContainer extends Fragment {
     private FrameLayout fragmentContainer;
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
+    private GridLayoutManager layoutManager;
+
+    private List<TestItem> testItemList = new ArrayList<>();
+    private SightFragmentAdapter sightAdapter;
 
     public static FragmentContainer newInstance(int index) {
         FragmentContainer fragmentContainer = new FragmentContainer();
@@ -63,19 +69,19 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initUser(View view) {
-        UserEntity[] users = {new UserEntity("user info", R.drawable.ic_user_info),
-                new UserEntity("order", R.drawable.ic_user_order),
-                new UserEntity("setting", R.drawable.ic_user_setting),
-                new UserEntity("exit", R.drawable.ic_user_exit)};
+        FragmentUserContainer[] users = {new FragmentUserContainer("user info", R.drawable.ic_user_info),
+                new FragmentUserContainer("order", R.drawable.ic_user_order),
+                new FragmentUserContainer("setting", R.drawable.ic_user_setting),
+                new FragmentUserContainer("exit", R.drawable.ic_user_exit)};
 
-        List<UserEntity> userEntityList = new ArrayList<>();
+        List<FragmentUserContainer> fragmentUserContainerList = new ArrayList<>();
 
-        UserAdapter adapter = new UserAdapter(userEntityList);
+        FragmentUserAdapter adapter = new FragmentUserAdapter(fragmentUserContainerList);
 
-        userEntityList.add(users[0]);
-        userEntityList.add(users[1]);
-        userEntityList.add(users[2]);
-        userEntityList.add(users[3]);
+        fragmentUserContainerList.add(users[0]);
+        fragmentUserContainerList.add(users[1]);
+        fragmentUserContainerList.add(users[2]);
+        fragmentUserContainerList.add(users[3]);
 
         fragmentContainer = view.findViewById(R.id.fragment_user);
         recyclerView = view.findViewById(R.id.fragment_user_recycler_view);
@@ -85,67 +91,85 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initHotel(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_hotel);
-        recyclerView = view.findViewById(R.id.fragment_hotel_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+//        fragmentContainer = view.findViewById(R.id.fragment_hotel);
+//        recyclerView = view.findViewById(R.id.fragment_hotel_recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<String> itemsData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-        }
+//        ArrayList<String> itemsData = new ArrayList<>();
+//        for (int i = 0; i < 50; i++) {
+//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
+//        }
 
-        FragmentAdapter adapter = new FragmentAdapter(itemsData);
-        recyclerView.setAdapter(adapter);
+//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
+//        recyclerView.setAdapter(adapter);
     }
 
     private void initRepast(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_repast);
-        recyclerView = view.findViewById(R.id.fragment_repast_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+//        fragmentContainer = view.findViewById(R.id.fragment_repast);
+//        recyclerView = view.findViewById(R.id.fragment_repast_recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<String> itemsData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-        }
+//        ArrayList<String> itemsData = new ArrayList<>();
+//        for (int i = 0; i < 50; i++) {
+//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
+//        }
 
-        FragmentAdapter adapter = new FragmentAdapter(itemsData);
-        recyclerView.setAdapter(adapter);
+//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
+//        recyclerView.setAdapter(adapter);
     }
 
     private void initTravel(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_travel);
-        recyclerView = view.findViewById(R.id.fragment_travel_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+//        fragmentContainer = view.findViewById(R.id.fragment_travel);
+//        recyclerView = view.findViewById(R.id.fragment_travel_recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<String> itemsData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-        }
+//        ArrayList<String> itemsData = new ArrayList<>();
+//        for (int i = 0; i < 50; i++) {
+//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
+//        }
 
-        FragmentAdapter adapter = new FragmentAdapter(itemsData);
-        recyclerView.setAdapter(adapter);
+//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
+//        recyclerView.setAdapter(adapter);
     }
 
     private void initSight(View view) {
+
+        TestItem[] items = {new TestItem("test1", R.drawable.test1),
+        new TestItem("test2", R.drawable.test2),
+        new TestItem("test3", R.drawable.test3),
+        new TestItem("test4", R.drawable.test4),
+        new TestItem("test5", R.drawable.test5)};
+
+        testItemList.clear();
+        for (int i = 0; i < 50; i++) {
+            Random random = new Random();
+            int index = random.nextInt(items.length);
+            testItemList.add(items[index]);
+        }
+
         fragmentContainer = view.findViewById(R.id.fragment_sight);
         recyclerView = view.findViewById(R.id.fragment_sight_recycler_view);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
+        sightAdapter = new SightFragmentAdapter(testItemList);
+        recyclerView.setAdapter(sightAdapter);
 
-        ArrayList<String> itemsData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-        }
+//        ArrayList<String> itemsData = new ArrayList<>();
+//        for (int i = 0; i < 50; i++) {
+//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
+//        }
 
-        FragmentAdapter adapter = new FragmentAdapter(itemsData);
-        recyclerView.setAdapter(adapter);
+//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
+//        recyclerView.setAdapter(adapter);
+
+        refreshData(view, R.id.sight_swipe_refresh);
     }
 
     /**
@@ -176,5 +200,38 @@ public class FragmentContainer extends Fragment {
             Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
             fragmentContainer.startAnimation(fadeOut);
         }
+    }
+
+    /**
+     * Refresh data
+     */
+    public void refreshData(View view, int swipeId) {
+        final SwipeRefreshLayout swipeRefresh;
+        swipeRefresh = view.findViewById(swipeId);
+        swipeRefresh.setColorSchemeResources(R.color.colorAccent);
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        // Todo init data
+                        swipeRefresh.setRefreshing(false);
+                    }
+                }).start();
+            }
+        });
+    }
+
+    /**
+     * Test data item
+     */
+    private void initTestItem() {
+
     }
 }

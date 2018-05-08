@@ -2,13 +2,14 @@ package com.qinzitravel;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 
 import com.activity_collector.BaseActivity;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
 import com.fragment_container.FragmentContainer;
-import com.viewPagerAdapter.ViewPagerAdapter;
+import com.fragment_container.ViewPagerAdapter;
 
 public class MainActivity extends BaseActivity {
 

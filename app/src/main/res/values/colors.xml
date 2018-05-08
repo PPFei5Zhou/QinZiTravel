@@ -5,4 +5,6 @@
     <color name="colorAccent">#03A9F4</color>
 
     <color name="colorNavigation">#03A9F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>
