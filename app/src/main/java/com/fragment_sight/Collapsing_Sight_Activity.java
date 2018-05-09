@@ -11,7 +11,7 @@ import com.activity_collector.BaseActivity;
 import com.bumptech.glide.Glide;
 import com.qinzitravel.R;
 
-public class Collapsing_Sight extends BaseActivity {
+public class Collapsing_Sight_Activity extends BaseActivity {
 
     public static final String SIGHT_NAME = "sight_name";
     public static final String SIGHT_IMAGE_ID = "sight_image_id";

@@ -56,9 +56,9 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
                 try {
                     int position = holder.getAdapterPosition();
                     SightTestItem sightTestItem = mSightTestItem.get(position);
-                    Intent intent = new Intent(mContext, Collapsing_Sight.class);
-                    intent.putExtra(Collapsing_Sight.SIGHT_NAME, sightTestItem.getName());
-                    intent.putExtra(Collapsing_Sight.SIGHT_IMAGE_ID, sightTestItem.getImageId());
+                    Intent intent = new Intent(mContext, Collapsing_Sight_Activity.class);
+                    intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItem.getName());
+                    intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItem.getImageId());
                     mContext.startActivity(intent);
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Log.d(TAG, "ArrayIndexOutOfBoundsException: position == -1");

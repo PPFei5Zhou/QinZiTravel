@@ -2,7 +2,6 @@ package com.qinzitravel;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 
 import com.activity_collector.BaseActivity;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
