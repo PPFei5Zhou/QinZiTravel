@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.collapsingToolbar.CollapsingToolbar"></activity>
+        <activity android:name="com.fragment_sight.Collapsing_Sight" android:theme="@style/fragmentTheme" />
     </application>
 
 </manifest>

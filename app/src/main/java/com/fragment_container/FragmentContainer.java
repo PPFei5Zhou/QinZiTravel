@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.Entity.TestItem;
+import com.Entity.SightTestItem;
+import com.fragment_sight.SightFragmentAdapter;
 import com.fragment_user.FragmentUserAdapter;
 import com.fragment_user.FragmentUserContainer;
 import com.qinzitravel.R;
@@ -28,7 +28,12 @@ public class FragmentContainer extends Fragment {
     private RecyclerView recyclerView;
     private GridLayoutManager layoutManager;
 
-    private List<TestItem> testItemList = new ArrayList<>();
+    private List<SightTestItem> sightTestItemList = new ArrayList<>();
+    private SightTestItem[] items = {new SightTestItem("test1", R.drawable.test1),
+            new SightTestItem("test2", R.drawable.test2),
+            new SightTestItem("test3", R.drawable.test3),
+            new SightTestItem("test4", R.drawable.test4),
+            new SightTestItem("test5", R.drawable.test5)};
     private SightFragmentAdapter sightAdapter;
 
     public static FragmentContainer newInstance(int index) {
@@ -91,66 +96,24 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initHotel(View view) {
-//        fragmentContainer = view.findViewById(R.id.fragment_hotel);
-//        recyclerView = view.findViewById(R.id.fragment_hotel_recycler_view);
-//        recyclerView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(getActivity());
-//        recyclerView.setLayoutManager(layoutManager);
 
-//        ArrayList<String> itemsData = new ArrayList<>();
-//        for (int i = 0; i < 50; i++) {
-//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-//        }
-
-//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
-//        recyclerView.setAdapter(adapter);
     }
 
     private void initRepast(View view) {
-//        fragmentContainer = view.findViewById(R.id.fragment_repast);
-//        recyclerView = view.findViewById(R.id.fragment_repast_recycler_view);
-//        recyclerView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(getActivity());
-//        recyclerView.setLayoutManager(layoutManager);
 
-//        ArrayList<String> itemsData = new ArrayList<>();
-//        for (int i = 0; i < 50; i++) {
-//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-//        }
-
-//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
-//        recyclerView.setAdapter(adapter);
     }
 
     private void initTravel(View view) {
-//        fragmentContainer = view.findViewById(R.id.fragment_travel);
-//        recyclerView = view.findViewById(R.id.fragment_travel_recycler_view);
-//        recyclerView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(getActivity());
-//        recyclerView.setLayoutManager(layoutManager);
 
-//        ArrayList<String> itemsData = new ArrayList<>();
-//        for (int i = 0; i < 50; i++) {
-//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-//        }
-
-//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
-//        recyclerView.setAdapter(adapter);
     }
 
     private void initSight(View view) {
 
-        TestItem[] items = {new TestItem("test1", R.drawable.test1),
-        new TestItem("test2", R.drawable.test2),
-        new TestItem("test3", R.drawable.test3),
-        new TestItem("test4", R.drawable.test4),
-        new TestItem("test5", R.drawable.test5)};
-
-        testItemList.clear();
+        sightTestItemList.clear();
         for (int i = 0; i < 50; i++) {
             Random random = new Random();
             int index = random.nextInt(items.length);
-            testItemList.add(items[index]);
+            sightTestItemList.add(items[index]);
         }
 
         fragmentContainer = view.findViewById(R.id.fragment_sight);
@@ -158,18 +121,8 @@ public class FragmentContainer extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
-        sightAdapter = new SightFragmentAdapter(testItemList);
+        sightAdapter = new SightFragmentAdapter(sightTestItemList);
         recyclerView.setAdapter(sightAdapter);
-
-//        ArrayList<String> itemsData = new ArrayList<>();
-//        for (int i = 0; i < 50; i++) {
-//            itemsData.add("Fragment " + getArguments().getInt("index", -1) + " / Item " + i);
-//        }
-
-//        SightFragmentAdapter adapter = new SightFragmentAdapter(itemsData);
-//        recyclerView.setAdapter(adapter);
-
-        refreshData(view, R.id.sight_swipe_refresh);
     }
 
     /**
@@ -200,38 +153,5 @@ public class FragmentContainer extends Fragment {
             Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
             fragmentContainer.startAnimation(fadeOut);
         }
-    }
-
-    /**
-     * Refresh data
-     */
-    public void refreshData(View view, int swipeId) {
-        final SwipeRefreshLayout swipeRefresh;
-        swipeRefresh = view.findViewById(swipeId);
-        swipeRefresh.setColorSchemeResources(R.color.colorAccent);
-        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        // Todo init data
-                        swipeRefresh.setRefreshing(false);
-                    }
-                }).start();
-            }
-        });
-    }
-
-    /**
-     * Test data item
-     */
-    private void initTestItem() {
-
     }
 }

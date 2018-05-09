@@ -10,13 +10,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/item_image"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="160dp"
+            app:riv_corner_radius="4dip"
             android:scaleType="centerCrop"/>
 
         <TextView

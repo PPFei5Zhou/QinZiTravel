@@ -1,10 +1,10 @@
 package com.Entity;
 
-public class TestItem {
+public class SightTestItem {
     private String name;
     private int imageId;
 
-    public TestItem(String name, int imageId) {
+    public SightTestItem(String name, int imageId) {
         this.name = name;
         this.imageId = imageId;
     }
