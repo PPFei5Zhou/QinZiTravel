@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,16 +52,12 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    int position = holder.getAdapterPosition();
-                    SightTestItem sightTestItem = mSightTestItem.get(position);
-                    Intent intent = new Intent(mContext, Collapsing_Sight_Activity.class);
-                    intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItem.getName());
-                    intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItem.getImageId());
-                    mContext.startActivity(intent);
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    Log.d(TAG, "ArrayIndexOutOfBoundsException: position == -1");
-                }
+                int position = holder.getAdapterPosition();
+                SightTestItem sightTestItem = mSightTestItem.get(position);
+                Intent intent = new Intent(mContext, Collapsing_Sight_Activity.class);
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItem.getName());
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItem.getImageId());
+                mContext.startActivity(intent);
             }
         });
         return holder;

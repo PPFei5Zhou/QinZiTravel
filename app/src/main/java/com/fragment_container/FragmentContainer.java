@@ -14,8 +14,8 @@ import android.widget.FrameLayout;
 
 import com.Entity.SightTestItem;
 import com.fragment_sight.SightFragmentAdapter;
-import com.fragment_user.FragmentUserAdapter;
-import com.fragment_user.FragmentUserContainer;
+import com.fragment_user.UserFragmentAdapter;
+import com.Entity.UserListItem;
 import com.qinzitravel.R;
 
 import java.util.ArrayList;
@@ -23,17 +23,26 @@ import java.util.List;
 import java.util.Random;
 
 public class FragmentContainer extends Fragment {
+
+    private static final String TAG = "FragmentContainer";
+
     private FrameLayout fragmentContainer;
     private RecyclerView recyclerView;
     private GridLayoutManager layoutManager;
 
+    List<UserListItem> userListItemList = new ArrayList<>();
+    private UserListItem[] users = {new UserListItem("Info", R.drawable.ic_user_info),
+            new UserListItem("Order", R.drawable.ic_user_order),
+            new UserListItem("Setting", R.drawable.ic_user_setting),
+            new UserListItem("Exit", R.drawable.ic_user_exit)};
+
     private List<SightTestItem> sightTestItemList = new ArrayList<>();
+    private SightFragmentAdapter sightAdapter;
     private SightTestItem[] items = {new SightTestItem("test1", R.drawable.test1),
             new SightTestItem("test2", R.drawable.test2),
             new SightTestItem("test3", R.drawable.test3),
             new SightTestItem("test4", R.drawable.test4),
             new SightTestItem("test5", R.drawable.test5)};
-    private SightFragmentAdapter sightAdapter;
 
     public static FragmentContainer newInstance(int index) {
         FragmentContainer fragmentContainer = new FragmentContainer();
@@ -72,40 +81,6 @@ public class FragmentContainer extends Fragment {
         }
     }
 
-    private void initUser(View view) {
-        FragmentUserContainer[] users = {new FragmentUserContainer("user info", R.drawable.ic_user_info),
-                new FragmentUserContainer("order", R.drawable.ic_user_order),
-                new FragmentUserContainer("setting", R.drawable.ic_user_setting),
-                new FragmentUserContainer("exit", R.drawable.ic_user_exit)};
-
-        List<FragmentUserContainer> fragmentUserContainerList = new ArrayList<>();
-
-        FragmentUserAdapter adapter = new FragmentUserAdapter(fragmentUserContainerList);
-
-        fragmentUserContainerList.add(users[0]);
-        fragmentUserContainerList.add(users[1]);
-        fragmentUserContainerList.add(users[2]);
-        fragmentUserContainerList.add(users[3]);
-
-        fragmentContainer = view.findViewById(R.id.fragment_user);
-        recyclerView = view.findViewById(R.id.fragment_user_recycler_view);
-        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 1);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
-    }
-
-    private void initHotel(View view) {
-
-    }
-
-    private void initRepast(View view) {
-
-    }
-
-    private void initTravel(View view) {
-
-    }
-
     private void initSight(View view) {
 
         sightTestItemList.clear();
@@ -117,11 +92,38 @@ public class FragmentContainer extends Fragment {
 
         fragmentContainer = view.findViewById(R.id.fragment_sight);
         recyclerView = view.findViewById(R.id.fragment_sight_recycler_view);
+
         recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
         sightAdapter = new SightFragmentAdapter(sightTestItemList);
         recyclerView.setAdapter(sightAdapter);
+    }
+
+    private void initTravel(View view) {
+
+    }
+
+    private void initRepast(View view) {
+
+    }
+
+    private void initHotel(View view) {
+
+    }
+
+    private void initUser(View view) {
+        userListItemList.add(users[0]);
+        userListItemList.add(users[1]);
+        userListItemList.add(users[2]);
+        userListItemList.add(users[3]);
+
+        fragmentContainer = view.findViewById(R.id.fragment_user);
+        recyclerView = view.findViewById(R.id.fragment_user_recycler_view);
+        layoutManager = new GridLayoutManager(getActivity(), 1);
+        recyclerView.setLayoutManager(layoutManager);
+        UserFragmentAdapter adapter = new UserFragmentAdapter(userListItemList);
+        recyclerView.setAdapter(adapter);
     }
 
     /**
