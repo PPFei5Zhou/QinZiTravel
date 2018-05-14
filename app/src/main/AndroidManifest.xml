@@ -23,10 +23,12 @@
         </activity>
         <activity
             android:name="com.fragment_sight.Collapsing_Sight_Activity"
-            android:theme="@style/fragmentTheme" />
+            android:theme="@style/fragmentTheme" >
+        </activity>
         <activity
             android:name="com.fragment_user.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login">
+        </activity>
     </application>
 
 </manifest>

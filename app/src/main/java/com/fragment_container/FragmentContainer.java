@@ -1,10 +1,13 @@
 package com.fragment_container;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +37,8 @@ public class FragmentContainer extends Fragment {
     private UserListItem[] users = {new UserListItem("Info", R.drawable.ic_user_info),
             new UserListItem("Order", R.drawable.ic_user_order),
             new UserListItem("Setting", R.drawable.ic_user_setting),
-            new UserListItem("Exit", R.drawable.ic_user_exit)};
+            new UserListItem("Exit", R.drawable.ic_user_exit),
+            new UserListItem("Account", R.drawable.ic_user_account)};
 
     private List<SightTestItem> sightTestItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
@@ -52,12 +56,25 @@ public class FragmentContainer extends Fragment {
         return fragmentContainer;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Log.d(TAG, "onAttach");
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate");
+    }
+
     @Nullable
     @Override
     /**
      * load selected navigation item content
      */
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView");
         if (getArguments().getInt("index", 0) == 0) {
             View view = inflater.inflate(R.layout.fragment_sight, container, false);
             initSight(view);
@@ -101,19 +118,23 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initTravel(View view) {
-
+        fragmentContainer = view.findViewById(R.id.fragment_travel);
     }
 
     private void initRepast(View view) {
-
+        fragmentContainer = view.findViewById(R.id.fragment_repast);
     }
 
     private void initHotel(View view) {
-
+        fragmentContainer = view.findViewById(R.id.fragment_hotel);
     }
 
     private void initUser(View view) {
-        userListItemList.add(users[0]);
+        if (isLogin()) {
+            userListItemList.add(users[0]);
+        } else {
+            userListItemList.add(users[4]);
+        }
         userListItemList.add(users[1]);
         userListItemList.add(users[2]);
         userListItemList.add(users[3]);
@@ -154,5 +175,61 @@ public class FragmentContainer extends Fragment {
             Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
             fragmentContainer.startAnimation(fadeOut);
         }
+    }
+
+    public boolean isLogin() {
+        /**
+         * check user login status
+         * @return true is login
+         */
+        SharedPreferences pref = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
+        int loginStatus = pref.getInt("loginStatus", 0);
+        Log.d(TAG, "======================================>login status is " + loginStatus);
+        if (loginStatus == 1) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(TAG, "onActivityCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d(TAG, "onDetach");
     }
 }

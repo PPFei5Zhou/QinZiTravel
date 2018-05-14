@@ -2,6 +2,8 @@ package com.fragment_user;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +17,8 @@ import com.Entity.UserListItem;
 import com.qinzitravel.R;
 
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 /**
  * Created by zhou on 18-5-3.
@@ -23,8 +27,6 @@ import java.util.List;
 public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapter.ViewHolder> {
 
     private static final String TAG = "UserFragmentAdapter";
-
-    private Intent intent;
 
     private Context mContext;
 
@@ -63,19 +65,33 @@ public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapte
                 UserListItem userListItem = mUserList.get(position);
                 Log.d(TAG, "onClick: " + userListItem.getUser_text());
                 switch (userListItem.getUser_text()) {
+                    case "Account":
+                        Log.d(TAG, "switch " + userListItem.getUser_text());
+                        Intent intent = new Intent(mContext, LoginActivity.class);
+                        mContext.startActivity(intent);
+                        break;
                     case "Info":
-                        Log.d(TAG, "switch Info");
-//                        intent = new Intent(mContext, LoginActivity.class);
-//                        mContext.startActivity(intent);
+                        Log.d(TAG, "switch " + userListItem.getUser_text());
                         break;
                     case "Order":
-                        Log.d(TAG, "switch Order");
+                        Log.d(TAG, "switch " + userListItem.getUser_text());
                         break;
                     case "Setting":
-                        Log.d(TAG, "switch Setting");
+                        Log.d(TAG, "switch " + userListItem.getUser_text());
                         break;
                     case "Exit":
-                        Log.d(TAG, "switch Exit");
+                        Log.d(TAG, "switch " + userListItem.getUser_text());
+                        SharedPreferences.Editor editor = mContext.getSharedPreferences("loginStatus", Context.MODE_PRIVATE).edit();
+                        editor.putInt("loginStatus", 0);
+                        editor.apply();
+
+                        // test log
+                        SharedPreferences pref = mContext.getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
+                        int loginStatus = pref.getInt("loginStatus", 0);
+                        Log.d(TAG, "======================================>login status is " + loginStatus);
+
+                        // update ui
+
                         break;
                     default:
                         break;
