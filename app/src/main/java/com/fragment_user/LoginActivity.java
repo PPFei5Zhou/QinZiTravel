@@ -3,6 +3,7 @@ package com.fragment_user;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -27,16 +28,17 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.activity_collector.BaseActivity;
+import com.qinzitravel.MainActivity;
 import com.qinzitravel.R;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import static com.activity_collector.ActivityCollector.finishAll;
 
 /**
  * A login screen that offers login via email/password.
@@ -342,10 +344,8 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                         editor.apply();
                         return true;
                     }
-                    mPasswordView.setError(getString(R.string.error_incorrect_password));
+                    FLAG = 1;
                 }
-                FLAG = 1;
-                mEmailView.setError(getString(R.string.error_invalid_email));
             }
             return false;
         }
@@ -356,11 +356,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             showProgress(false);
 
             if (success) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
                 finish();
             } else if (FLAG == 0){
-                mPasswordView.requestFocus();
-            } else if (FLAG == 1) {
                 mEmailView.requestFocus();
+                mEmailView.setError(getString(R.string.error_invalid_email));
+            } else if (FLAG == 1) {
+                mPasswordView.requestFocus();
+                mPasswordView.setError(getString(R.string.error_incorrect_password));
             }
         }
 
@@ -369,6 +373,12 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             mAuthTask = null;
             showProgress(false);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAll();
     }
 }
 

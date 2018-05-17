@@ -33,12 +33,12 @@ public class FragmentContainer extends Fragment {
     private RecyclerView recyclerView;
     private GridLayoutManager layoutManager;
 
+    private UserFragmentAdapter userAdapter;
     List<UserListItem> userListItemList = new ArrayList<>();
-    private UserListItem[] users = {new UserListItem("Info", R.drawable.ic_user_info),
-            new UserListItem("Order", R.drawable.ic_user_order),
-            new UserListItem("Setting", R.drawable.ic_user_setting),
-            new UserListItem("Exit", R.drawable.ic_user_exit),
-            new UserListItem("Account", R.drawable.ic_user_account)};
+    private UserListItem[] users = {new UserListItem("用户信息", R.drawable.ic_user_info),
+            new UserListItem("订单", R.drawable.ic_user_order),
+            new UserListItem("设置", R.drawable.ic_user_setting),
+            new UserListItem("退出", R.drawable.ic_user_exit)};
 
     private List<SightTestItem> sightTestItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
@@ -130,21 +130,14 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initUser(View view) {
-        if (isLogin()) {
-            userListItemList.add(users[0]);
-        } else {
-            userListItemList.add(users[4]);
-        }
-        userListItemList.add(users[1]);
-        userListItemList.add(users[2]);
-        userListItemList.add(users[3]);
+        initUserList();
 
         fragmentContainer = view.findViewById(R.id.fragment_user);
         recyclerView = view.findViewById(R.id.fragment_user_recycler_view);
         layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
-        UserFragmentAdapter adapter = new UserFragmentAdapter(userListItemList);
-        recyclerView.setAdapter(adapter);
+        userAdapter = new UserFragmentAdapter(userListItemList);
+        recyclerView.setAdapter(userAdapter);
     }
 
     /**
@@ -191,45 +184,15 @@ public class FragmentContainer extends Fragment {
         return false;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Log.d(TAG, "onActivityCreated");
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Log.d(TAG, "onStart");
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume");
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.d(TAG, "onPause");
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        Log.d(TAG, "onStop");
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Log.d(TAG, "onDestroyView");
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Log.d(TAG, "onDetach");
+    private void initUserList() {
+        if (isLogin()) {
+            userListItemList.add(users[0]);
+            userListItemList.add(users[1]);
+            userListItemList.add(users[2]);
+            userListItemList.add(users[3]);
+        } else {
+            userListItemList.add(users[4]);
+            userListItemList.add(users[2]);
+        }
     }
 }

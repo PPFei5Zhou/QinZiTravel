@@ -6,4 +6,14 @@
     <string name="navigationRepast" translatable="false">餐饮</string>
     <string name="navigationHotel" translatable="false">酒店</string>
     <string name="navigationUser" translatable="false">个人中心</string>
+    <string name="login_out">已退出</string>
+    <string name="prompt_email" translatable="false">账号</string>
+    <string name="prompt_password" translatable="false">密码</string>
+    <string name="action_sign_in" translatable="false">登陆</string>
+    <string name="action_sign_in_short" translatable="false">登陆</string>
+    <string name="error_invalid_email" translatable="false">账户不存在</string>
+    <string name="error_invalid_password" translatable="false">密码太短</string>
+    <string name="error_incorrect_password" translatable="false">密码不正确</string>
+    <string name="error_field_required" translatable="false">需要填写帐号密码</string>
+    <string name="permission_rationale" translatable="false">需要获取读取联系人权限</string>
 </resources>

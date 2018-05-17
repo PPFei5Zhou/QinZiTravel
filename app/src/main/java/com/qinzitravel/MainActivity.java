@@ -2,6 +2,7 @@ package com.qinzitravel;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.activity_collector.BaseActivity;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
@@ -92,5 +93,11 @@ public class MainActivity extends BaseActivity {
         viewPager.setAdapter(adapter);
 
         currentFragment = adapter.getCurrentFragment();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MainActivity", "onStop");
     }
 }
