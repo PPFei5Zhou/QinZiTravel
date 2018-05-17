@@ -33,9 +33,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.Entity.User;
 import com.activity_collector.BaseActivity;
 import com.qinzitravel.MainActivity;
 import com.qinzitravel.R;
+
+import org.litepal.LitePal;
 
 import static android.Manifest.permission.READ_CONTACTS;
 import static com.activity_collector.ActivityCollector.finishAll;
@@ -72,6 +75,10 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        LitePal.getDatabase();
+        InitUserData();
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         mEmailView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -379,6 +386,26 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     public void onBackPressed() {
         super.onBackPressed();
         finishAll();
+    }
+
+
+    private void InitUserData() {
+        User user = new User();
+        user.setuserid(0);
+        user.setUsername("admin1");
+        user.setPassword("admin1");
+        user.setPhone(15677777777L);
+        user.setUseraddress("GuiLin China");
+        user.setUsertype(0);
+        user.save();
+        User user1 = new User();
+        user1.setuserid(1);
+        user1.setUsername("test");
+        user1.setPassword("test11");
+        user1.setPhone(15677777777L);
+        user1.setUseraddress("GuiLin China");
+        user1.setUsertype(1);
+        user1.save();
     }
 }
 

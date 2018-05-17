@@ -10,48 +10,33 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="com.qinzitravel" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61f781e7-36b4-41b4-aa3d-453338a2c5e7" name="Default" comment="update fragment user&#10;fix some problem">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user_account.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user_account.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user_account.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user_account.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+    <list default="true" id="61f781e7-36b4-41b4-aa3d-453338a2c5e7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/assets/litepal.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/Entity/Hotel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/Entity/Repast.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/Entity/Sight.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/Entity/User.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user_exit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user_order.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user_setting.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user_exit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user_order.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user_setting.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user_exit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user_order.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user_setting.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user_exit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user_order.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user_setting.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,47 +90,129 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FragmentContainer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3477">
-              <caret line="206" column="24" lean-forward="false" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5646">
-              <caret line="341" column="21" lean-forward="false" selection-start-line="341" selection-start-column="21" selection-end-line="341" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="56" column="58" lean-forward="false" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+            <state relative-caret-position="203">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
-                <element signature="e#2262#2287#0" expanded="true" />
+                <element signature="e#3543#3689#0" expanded="true" />
+                <element signature="e#3688#3689#0" expanded="true" />
+                <element signature="e#6266#6308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFragmentAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java">
+      <file leaf-file-name="litepal.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/litepal.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="76">
+              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Hotel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding>
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1074#1075#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repast.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Repast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+              <folding>
+                <element signature="e#288#289#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Sight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding>
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1004#1005#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +235,7 @@
       <find>mEmailView</find>
       <find>error_incorrect_password</find>
       <find>onPostExecute</find>
+      <find>finish()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2214,13 +2282,21 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/FragmentUserAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_sight.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/SightFragmentAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/assets/litepal.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/Entity/Hotel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/Entity/Repast.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/Entity/Sight.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EntityData/UserDataBase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/Entity/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/litepal.xml" />
       </list>
     </option>
   </component>
@@ -2315,6 +2391,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QinZiTravel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QinZiTravel" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="fragment_container" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2363,10 +2449,21 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="QinZiTravel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QinZiTravel" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -2428,14 +2525,24 @@
               <item name="QinZiTravel" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="QinZiTravel" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="QinZiTravel" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2449,8 +2556,10 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/zhou/AndroidStudioProjects/QinZiTravel/app/build/generated/source/r/debug/com/qinzitravel/R.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/testImage" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/assets" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.fragment_user" />
@@ -2460,8 +2569,8 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/testImage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2604,6 +2713,18 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="QinZiTravel" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2668,18 +2789,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="QinZiTravel" />
-      <envs />
-    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
@@ -2721,7 +2830,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526033953215</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Login function&#10;update icon on user fragment">
+      <created>1526285121593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1526285121593</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update Login function&#10;update icon on user fragment">
+      <created>1526568461498</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526568461498</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2735,7 +2858,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="-4" width="1873" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2743,22 +2865,22 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32778355" sideWeight="0.50410956" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.50409615" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32778355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.49590388" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6690947" sideWeight="0.49808007" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31737775" sideWeight="0.4958904" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31737775" sideWeight="0.4958904" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19060622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32674298" sideWeight="0.49705014" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298744" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2766,8 +2888,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="StringPreview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2776,80 +2899,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix some redundant code" />
     <MESSAGE value="update fragment user&#10;fix some problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="update fragment user&#10;fix some problems" />
+    <MESSAGE value="add Login function&#10;update icon on user fragment" />
+    <MESSAGE value="update Login function&#10;update icon on user fragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Login function&#10;update icon on user fragment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/activity_collector/ActivityCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-core-ui/26.1.0/4d52cef4a24bf9939de1d256ca9f0974c6e636a4/support-core-ui-26.1.0-sources.jar!/android/support/v4/widget/SwipeRefreshLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="533" column="83" lean-forward="true" selection-start-line="533" selection-start-column="7" selection-end-line="533" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Refresh/Refresh.java" />
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1920">
-          <caret line="770" column="13" lean-forward="false" selection-start-line="770" selection-start-column="13" selection-end-line="770" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/Fragment_User.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/26.1.0/2b34456c30d6b6e5db5fa3e8fa02f6cebd5531fd/appcompat-v7-26.1.0-sources.jar!/android/support/v7/app/AppCompatActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="127" column="16" lean-forward="false" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/26.1.0/8279b00f5194701ff18363fa2958c5a26670b0ef/support-fragment-26.1.0-sources.jar!/android/support/v4/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1472" column="16" lean-forward="false" selection-start-line="1472" selection-start-column="16" selection-end-line="1472" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collapsingToolbar/CollapsingToolbar.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ImageUtils/ImageUtils.java" />
@@ -2905,14 +2973,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.r0adkll/slidableactivity/2.0.6/c9d609040da653cf62ee8de8743cee4a1eb3f12e/slidableactivity-2.0.6-sources.jar!/com/r0adkll/slidr/model/SlidrConfig.java">
@@ -2952,33 +3020,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/UserListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/test_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/collapsing_sight.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/collapsing_sight.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/b6253581bbc3120a3436bbe36b58ef10/jars/classes.jar!/android/support/constraint/Constraints.class">
@@ -2989,14 +3050,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sight.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Android/Sdk/sources/android-27/android/text/TextUtils.java">
@@ -3021,21 +3082,13 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-27/data/res/layout/simple_dropdown_item_1line.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/ViewPagerAdapter.java">
@@ -3053,17 +3106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_sight/SightFragmentAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -3075,44 +3117,21 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.qinzitravel/shared_prefs/loginStatus.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="52" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1158">
           <caret line="1548" column="16" lean-forward="false" selection-start-line="1548" selection-start-column="16" selection-end-line="1548" selection-end-column="16" />
-          <folding>
-            <element signature="e#60767#60768#0" expanded="false" />
-            <element signature="e#60797#60798#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3120,46 +3139,230 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="5539" column="16" lean-forward="false" selection-start-line="5539" selection-start-column="16" selection-end-line="5539" selection-end-column="16" />
-          <folding>
-            <element signature="e#235860#235861#0" expanded="false" />
-            <element signature="e#235914#235915#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="58" lean-forward="false" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/UserListItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="56" column="58" lean-forward="false" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
-          <folding>
-            <element signature="e#2262#2287#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="102" column="70" lean-forward="false" selection-start-line="102" selection-start-column="70" selection-end-line="102" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3477">
-          <caret line="206" column="24" lean-forward="false" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="24" />
+        <state relative-caret-position="477">
+          <caret line="179" column="92" lean-forward="false" selection-start-line="179" selection-start-column="92" selection-end-line="179" selection-end-column="92" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy:///home/zhou/AndroidStudioProjects/QinZiTravel/app/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.qinzitravel/databases/User.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Repast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding>
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/Sight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EntityData/UserDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/Entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#1109#1133#0" expanded="false" />
+            <element signature="e#1260#1285#0" expanded="false" />
+            <element signature="e#1413#1438#0" expanded="false" />
+            <element signature="e#1565#1589#0" expanded="false" />
+            <element signature="e#1714#1737#0" expanded="false" />
+            <element signature="e#2639#3502#0" expanded="false" />
+            <element signature="e#3501#3502#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5646">
-          <caret line="341" column="21" lean-forward="false" selection-start-line="341" selection-start-column="21" selection-end-line="341" selection-end-column="21" />
+        <state relative-caret-position="203">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#3543#3689#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#6266#6308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/litepal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>

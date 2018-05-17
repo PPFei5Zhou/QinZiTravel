@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="qinzitravel" />
+
+    <version value="5" />
+
+    <list>
+        <mapping class="com.Entity.User" />
+        <mapping class="com.Entity.Sight" />
+        <mapping class="com.Entity.Repast" />
+        <mapping class="com.Entity.Hotel" />
+    </list>
+</litepal>
