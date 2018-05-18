@@ -9,11 +9,13 @@
     <string name="login_out">已退出</string>
     <string name="prompt_email" translatable="false">账号</string>
     <string name="prompt_password" translatable="false">密码</string>
-    <string name="action_sign_in" translatable="false">登陆</string>
-    <string name="action_sign_in_short" translatable="false">登陆</string>
-    <string name="error_invalid_email" translatable="false">账户不存在</string>
-    <string name="error_invalid_password" translatable="false">密码太短</string>
+    <string name="action_sign_in" translatable="false">登录</string>
+    <string name="action_sign_in_short" translatable="false">登录</string>
+    <string name="error_invalid_email" translatable="false">账号不是11位号码或不是手机号、邮箱</string>
+    <string name="error_invalid_password" translatable="false">密码太短或是纯字母和纯数字组成</string>
     <string name="error_incorrect_password" translatable="false">密码不正确</string>
-    <string name="error_field_required" translatable="false">需要填写帐号密码</string>
+    <string name="error_email_required" translatable="false">需要填写帐号</string>
+    <string name="error_password_required">需要填写密码</string>
     <string name="permission_rationale" translatable="false">需要获取读取联系人权限</string>
+    <string name="error_incorrect_email" translatable="false">账号不存在</string>
 </resources>

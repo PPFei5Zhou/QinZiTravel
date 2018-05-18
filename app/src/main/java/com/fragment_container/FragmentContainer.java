@@ -177,7 +177,6 @@ public class FragmentContainer extends Fragment {
          */
         SharedPreferences pref = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
         int loginStatus = pref.getInt("loginStatus", 0);
-        Log.d(TAG, "======================================>login status is " + loginStatus);
         if (loginStatus == 1) {
             return true;
         }

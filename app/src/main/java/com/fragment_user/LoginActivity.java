@@ -189,15 +189,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
+            mEmailView.setError(getString(R.string.error_email_required));
             focusView = mEmailView;
             cancel = true;
         }
-//        else if (!isUsrNameValid(email)) {
-//            mEmailView.setError(getString(R.string.error_invalid_email));
-//            focusView = mEmailView;
-//            cancel = true;
-//        }
+        else if (!isUsrNameValid(email)) {
+            mEmailView.setError(getString(R.string.error_invalid_email));
+            focusView = mEmailView;
+            cancel = true;
+        }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -215,7 +215,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     private boolean isUsrNameValid(String usrName) {
         // match email address and phone number
         String regex = "^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$";
-        return usrName.contains("@") || usrName.matches(regex);
+        return usrName.matches(regex);
     }
 
     private boolean isPasswordValid(String password) {
@@ -322,7 +322,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         private final String mEmail;
         private final String mPassword;
 
-        private int FLAG = 0;
+        private int FLAG;
 
         UserLoginTask(String email, String password) {
             mEmail = email;
@@ -348,14 +348,19 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 //            Log.d(TAG, "===================> " + users.get(0).getPhone());
 //            Log.d(TAG, "===================> " + users.get(0).getPassword());
 
-            if (users.get(0).getPhone().equals(mEmail)) {
-                if (users.get(0).getPassword().equals(mPassword)) {
-                    SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
-                    editor.putInt("loginStatus", 1);
-                    editor.apply();
+            try {
+                if (users.get(0).getPhone().equals(mEmail)) {
+                    Log.d(TAG, "===================>mEmail is True");
+                    if (users.get(0).getPassword().equals(mPassword)) {
+                        SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
+                        editor.putInt("loginStatus", 1);
+                        editor.apply();
+                        Log.d(TAG, "===================>mPassword is True");
+                        return true;
+                    }
                     FLAG = 1;
-                    return true;
                 }
+            } catch (IndexOutOfBoundsException e) {
                 FLAG = 0;
             }
             return false;
@@ -372,7 +377,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 finish();
             } else if (FLAG == 0){
                 mEmailView.requestFocus();
-                mEmailView.setError(getString(R.string.error_invalid_email));
+                mEmailView.setError(getString(R.string.error_incorrect_email));
             } else if (FLAG == 1) {
                 mPasswordView.requestFocus();
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
