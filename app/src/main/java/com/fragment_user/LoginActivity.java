@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteConstraintException;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -20,6 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +33,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.Entity.User;
@@ -39,6 +42,7 @@ import com.qinzitravel.MainActivity;
 import com.qinzitravel.R;
 
 import org.litepal.LitePal;
+import org.litepal.crud.DataSupport;
 
 import static android.Manifest.permission.READ_CONTACTS;
 import static com.activity_collector.ActivityCollector.finishAll;
@@ -48,18 +52,13 @@ import static com.activity_collector.ActivityCollector.finishAll;
  */
 public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
+    private static final String TAG = "LoginActivity";
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "18675552315:123456z"
-    };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -341,18 +340,23 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 return false;
             }
 
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    if (pieces[1].equals(mPassword)) {
-                        // Account exists, return true if the password matches.
-                        SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
-                        editor.putInt("loginStatus", 1);
-                        editor.apply();
-                        return true;
-                    }
+            List<User> users = DataSupport.select("phone", "password")
+                    .where("phone = ?", mEmail)
+                    .find(User.class);
+
+//            Log.d(TAG, "===================> " + users.toString());
+//            Log.d(TAG, "===================> " + users.get(0).getPhone());
+//            Log.d(TAG, "===================> " + users.get(0).getPassword());
+
+            if (users.get(0).getPhone().equals(mEmail)) {
+                if (users.get(0).getPassword().equals(mPassword)) {
+                    SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
+                    editor.putInt("loginStatus", 1);
+                    editor.apply();
                     FLAG = 1;
+                    return true;
                 }
+                FLAG = 0;
             }
             return false;
         }
@@ -388,24 +392,23 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         finishAll();
     }
 
-
     private void InitUserData() {
-        User user = new User();
-        user.setuserid(0);
-        user.setUsername("admin1");
-        user.setPassword("admin1");
-        user.setPhone(15677777777L);
-        user.setUseraddress("GuiLin China");
-        user.setUsertype(0);
-        user.save();
-        User user1 = new User();
-        user1.setuserid(1);
-        user1.setUsername("test");
-        user1.setPassword("test11");
-        user1.setPhone(15677777777L);
-        user1.setUseraddress("GuiLin China");
-        user1.setUsertype(1);
-        user1.save();
+            User user = new User();
+            user.setuserid(0);
+            user.setUsername("admin1");
+            user.setPassword("admin1");
+            user.setPhone("15677777777");
+            user.setUseraddress("GuiLin China");
+            user.setUsertype(0);
+            user.save();
+            User user1 = new User();
+            user1.setuserid(1);
+            user1.setUsername("test");
+            user1.setPassword("test11");
+            user1.setPhone("18677777777");
+            user1.setUseraddress("GuiLin China");
+            user1.setUsertype(1);
+            user1.save();
     }
 }
 

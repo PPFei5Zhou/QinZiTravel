@@ -1,13 +1,23 @@
 package com.Entity;
 
+import org.litepal.annotation.Column;
 import org.litepal.crud.DataSupport;
 
 public class User extends DataSupport {
+    @Column(unique = true, nullable = false)
     private int userid;
+
+    @Column(nullable = false)
     private String username;
+
+    @Column(unique = true, nullable = false)
     private String password;
+
     private String useraddress;
-    private long phone;
+
+    @Column(unique = true, nullable = false)
+    private String phone;
+
     private int usertype;
 
     public int getuserid() {
@@ -42,11 +52,11 @@ public class User extends DataSupport {
         this.useraddress = useraddress;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
