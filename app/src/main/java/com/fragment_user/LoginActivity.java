@@ -375,6 +375,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(0, 0);
             } else if (FLAG == 0){
                 mEmailView.requestFocus();
                 mEmailView.setError(getString(R.string.error_incorrect_email));

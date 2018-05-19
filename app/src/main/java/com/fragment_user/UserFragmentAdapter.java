@@ -3,6 +3,7 @@ package com.fragment_user;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import com.Entity.UserListItem;
 import com.qinzitravel.R;
 
 import java.util.List;
+import java.util.zip.Inflater;
 
 /**
  * Created by zhou on 18-5-3.
@@ -28,6 +30,8 @@ public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapte
 
     private Context mContext;
     private Intent intent;
+
+    private View view;
 
     private List<UserListItem> mUserList;
 
@@ -50,11 +54,11 @@ public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapte
 
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         if (mContext == null) {
             mContext = parent.getContext();
         }
-        View view = LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
+        view = LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
 
         final ViewHolder holder = new ViewHolder(view);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {

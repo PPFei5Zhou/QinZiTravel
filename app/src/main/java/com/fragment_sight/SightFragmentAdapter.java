@@ -58,6 +58,7 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
                 intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItem.getName());
                 intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItem.getImageId());
                 mContext.startActivity(intent);
+
             }
         });
         return holder;

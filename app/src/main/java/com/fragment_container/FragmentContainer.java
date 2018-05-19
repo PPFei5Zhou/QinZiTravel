@@ -118,15 +118,12 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initTravel(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_travel);
     }
 
     private void initRepast(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_repast);
     }
 
     private void initHotel(View view) {
-        fragmentContainer = view.findViewById(R.id.fragment_hotel);
     }
 
     private void initUser(View view) {
@@ -154,20 +151,20 @@ public class FragmentContainer extends Fragment {
      */
     public void willBeDisplayed() {
         // Do what you want here, for example animate the content
-        if (fragmentContainer != null) {
-            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
-            fragmentContainer.startAnimation(fadeIn);
-        }
+//        if (fragmentContainer != null) {
+//            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
+//            fragmentContainer.startAnimation(fadeIn);
+//        }
     }
 
     /**
      * Called when a fragment will be hidden
      */
     public void willBeHidden() {
-        if (fragmentContainer != null) {
-            Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
-            fragmentContainer.startAnimation(fadeOut);
-        }
+//        if (fragmentContainer != null) {
+//            Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
+//            fragmentContainer.startAnimation(fadeOut);
+//        }
     }
 
     public boolean isLogin() {
