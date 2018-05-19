@@ -11,6 +11,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
 import com.fragment_container.FragmentContainer;
 import com.fragment_container.ViewPagerAdapter;
 
+import static com.activity_collector.ActivityCollector.finishAll;
+
 public class MainActivity extends BaseActivity {
 
     private FragmentContainer currentFragment;
@@ -100,5 +102,11 @@ public class MainActivity extends BaseActivity {
         super.onStop();
         Log.d("MainActivity", "onStop");
         bottomNavigation.setCurrentItem(0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAll();
     }
 }

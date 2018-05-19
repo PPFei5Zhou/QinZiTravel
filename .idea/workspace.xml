@@ -15,6 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61f781e7-36b4-41b4-aa3d-453338a2c5e7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_left.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_right.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -25,15 +29,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/SightFragmentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/SightFragmentAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/user_list_ripple.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/user_list_ripple.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/test_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/test_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,41 +88,18 @@
       <file leaf-file-name="FragmentContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2496">
-              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state relative-caret-position="732">
+              <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
               <folding>
-                <element signature="e#4311#4988#0" expanded="true" />
-                <element signature="e#4987#4988#0" expanded="true" />
-                <element signature="e#5622#6354#0" expanded="true" />
-                <element signature="e#6122#6140#0" expanded="true" />
-                <element signature="e#6353#6354#0" expanded="true" />
-                <element signature="e#7694#7737#0" expanded="true" />
-                <element signature="e#7762#7806#0" expanded="true" />
-                <element signature="e#7833#7879#0" expanded="true" />
-                <element signature="e#7903#7946#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewPagerAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/ViewPagerAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="437" column="53" lean-forward="false" selection-start-line="437" selection-start-column="53" selection-end-line="437" selection-end-column="53" />
-              <folding>
-                <element signature="e#3616#3762#0" expanded="true" />
-                <element signature="e#3761#3762#0" expanded="true" />
+                <element signature="e#4311#5028#0" expanded="true" />
+                <element signature="e#5027#5028#0" expanded="true" />
+                <element signature="e#5662#6394#0" expanded="true" />
+                <element signature="e#6162#6180#0" expanded="true" />
+                <element signature="e#6393#6394#0" expanded="true" />
+                <element signature="e#7734#7777#0" expanded="true" />
+                <element signature="e#7802#7846#0" expanded="true" />
+                <element signature="e#7873#7919#0" expanded="true" />
+                <element signature="e#7943#7986#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,6 +113,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
               <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collapsing_Sight_Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="75" column="17" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1176#1200#0" expanded="true" />
+                <element signature="e#1327#1352#0" expanded="true" />
+                <element signature="e#1480#1505#0" expanded="true" />
+                <element signature="e#1632#1656#0" expanded="true" />
+                <element signature="e#1781#1804#0" expanded="true" />
+                <element signature="e#2706#3569#0" expanded="true" />
+                <element signature="e#3568#3569#0" expanded="true" />
+                <marker date="1526734011501" expanded="true" signature="3894:3946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="389" column="41" lean-forward="false" selection-start-line="389" selection-start-column="16" selection-end-line="389" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -2063,7 +2078,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/User_Activity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserListItem.java" />
@@ -2091,16 +2105,22 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/user_list_ripple.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/SightFragmentAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/UserFragmentAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" />
         <option value="$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.qinzitravel/shared_prefs/loginData.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_in_left.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out_right.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="973" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -2421,11 +2441,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Android-Smart-Login" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="Pixel_2_XL_API_24" />
+    <property name="device.picker.selection" value="e29381e4" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/zhou/AndroidStudioProjects/QinZiTravel/app/build/generated/source/r/debug/com/qinzitravel/R.java" />
   </component>
@@ -2735,7 +2755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526720907820</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix user and sight fragment click event implementation">
+      <created>1526730533817</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1526730533818</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2753,7 +2780,7 @@
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.50409615" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3164693" sideWeight="0.4958904" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3164693" sideWeight="0.4958904" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.49705014" order="7" side_tool="false" content_ui="tabs" />
@@ -2770,7 +2797,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.49590388" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6684607" sideWeight="0.49808007" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20202559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2794,29 +2821,14 @@
     <MESSAGE value="update Login function&#10;update icon on user fragment" />
     <MESSAGE value="update login function" />
     <MESSAGE value="delete activity anim" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete activity anim" />
+    <MESSAGE value="fix user and sight fragment click event implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user and sight fragment click event implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/qinzitravel/ExampleUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-27/data/res/layout/simple_dropdown_item_1line.xml" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.1/ad225a74247e675db0b05ea4f8b17202acbb7f9d/recyclerview-v7-27.1.1-sources.jar!/android/support/v7/widget/GridLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.qinzitravel/shared_prefs/loginStatus.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3046,14 +3058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Android/Sdk/sources/android-27/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -3184,46 +3188,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2496">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="e#4311#4988#0" expanded="true" />
-            <element signature="e#4987#4988#0" expanded="true" />
-            <element signature="e#5622#6354#0" expanded="true" />
-            <element signature="e#6122#6140#0" expanded="true" />
-            <element signature="e#6353#6354#0" expanded="true" />
-            <element signature="e#7694#7737#0" expanded="true" />
-            <element signature="e#7762#7806#0" expanded="true" />
-            <element signature="e#7833#7879#0" expanded="true" />
-            <element signature="e#7903#7946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.qinzitravel/shared_prefs/litepal_prefs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="98" column="29" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding>
-            <marker date="1526725334983" expanded="true" signature="3827:3879" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/ViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3255,13 +3223,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/ViewPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_container/FragmentContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+          <folding>
+            <element signature="e#4311#5028#0" expanded="true" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5662#6394#0" expanded="true" />
+            <element signature="e#6162#6180#0" expanded="true" />
+            <element signature="e#6393#6394#0" expanded="true" />
+            <element signature="e#7734#7777#0" expanded="true" />
+            <element signature="e#7802#7846#0" expanded="true" />
+            <element signature="e#7873#7919#0" expanded="true" />
+            <element signature="e#7943#7986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_sight/Collapsing_Sight_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="75" column="17" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fragment_user/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="437" column="53" lean-forward="false" selection-start-line="437" selection-start-column="53" selection-end-line="437" selection-end-column="53" />
+        <state relative-caret-position="336">
+          <caret line="389" column="41" lean-forward="false" selection-start-line="389" selection-start-column="16" selection-end-line="389" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_in_left.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qinzitravel/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
           <folding>
-            <element signature="e#3616#3762#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1176#1200#0" expanded="true" />
+            <element signature="e#1327#1352#0" expanded="true" />
+            <element signature="e#1480#1505#0" expanded="true" />
+            <element signature="e#1632#1656#0" expanded="true" />
+            <element signature="e#1781#1804#0" expanded="true" />
+            <element signature="e#2706#3569#0" expanded="true" />
+            <element signature="e#3568#3569#0" expanded="true" />
+            <marker date="1526734011501" expanded="true" signature="3894:3946" ph="{...}" />
           </folding>
         </state>
       </provider>

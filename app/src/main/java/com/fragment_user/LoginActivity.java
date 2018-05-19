@@ -367,7 +367,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 //                        Log.d(TAG, "===================>mPassword is True");
                         SharedPreferences.Editor loginData = getSharedPreferences("loginData", MODE_PRIVATE).edit();
                         loginData.putBoolean("isLogin", true);
-                        loginData.putString("username", mEmailView.getText().toString());
+                        loginData.putString("username", "");
                         loginData.apply();
                         return true;
                     }
@@ -388,6 +388,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
+                finish();
             } else if (FLAG == 0){
                 mEmailView.requestFocus();
                 mEmailView.setError(getString(R.string.error_incorrect_email));

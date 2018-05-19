@@ -124,7 +124,7 @@ public class FragmentContainer extends Fragment {
                 intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItemList.get(position).getName());
                 intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItemList.get(position).getImageId());
                 getActivity().startActivity(intent);
-                getActivity().overridePendingTransition(0, 0);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }

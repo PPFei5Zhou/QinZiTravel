@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.activity_collector.BaseActivity;
 import com.bumptech.glide.Glide;
+import com.qinzitravel.MainActivity;
 import com.qinzitravel.R;
 
 public class Collapsing_Sight_Activity extends BaseActivity {
@@ -57,9 +58,21 @@ public class Collapsing_Sight_Activity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                Intent intent = new Intent(Collapsing_Sight_Activity.this, MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Collapsing_Sight_Activity.this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        finish();
     }
 }
