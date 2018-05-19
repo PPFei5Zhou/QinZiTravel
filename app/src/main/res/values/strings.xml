@@ -24,4 +24,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_info">User Info</string>
+    <string name="user_order">Order</string>
+    <string name="user_setting">Setting</string>
+    <string name="user_exit">Exit</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.fragment_sight;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,6 +22,15 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
     private Context mContext;
 
     private List<SightTestItem> mSightTestItem;
+
+    private OnItemClickListener mOnItemClickListener;
+
+    public interface OnItemClickListener{
+        void onClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener ){
+        this.mOnItemClickListener = onItemClickListener;
+    }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
@@ -47,28 +55,25 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
             mContext = parent.getContext();
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.test_item, parent, false);
-
         final ViewHolder holder = new ViewHolder(view);
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = holder.getAdapterPosition();
-                SightTestItem sightTestItem = mSightTestItem.get(position);
-                Intent intent = new Intent(mContext, Collapsing_Sight_Activity.class);
-                intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItem.getName());
-                intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItem.getImageId());
-                mContext.startActivity(intent);
-
-            }
-        });
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         SightTestItem sightTestItem = mSightTestItem.get(position);
         holder.itemName.setText(sightTestItem.getName());
         Glide.with(mContext).load(sightTestItem.getImageId()).into(holder.itemImage);
+
+        if (mOnItemClickListener != null) {
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.onClick(position);
+                }
+            });
+        }
     }
 
     @Override

@@ -99,5 +99,6 @@ public class MainActivity extends BaseActivity {
     protected void onStop() {
         super.onStop();
         Log.d("MainActivity", "onStop");
+        bottomNavigation.setCurrentItem(0);
     }
 }

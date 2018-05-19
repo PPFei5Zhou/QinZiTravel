@@ -1,6 +1,7 @@
 package com.fragment_container;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,9 +15,12 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.Entity.SightTestItem;
+import com.fragment_sight.Collapsing_Sight_Activity;
 import com.fragment_sight.SightFragmentAdapter;
+import com.fragment_user.LoginActivity;
 import com.fragment_user.UserFragmentAdapter;
 import com.Entity.UserListItem;
 import com.qinzitravel.R;
@@ -32,13 +36,10 @@ public class FragmentContainer extends Fragment {
     private FrameLayout fragmentContainer;
     private RecyclerView recyclerView;
     private GridLayoutManager layoutManager;
+    private Intent intent;
 
     private UserFragmentAdapter userAdapter;
     List<UserListItem> userListItemList = new ArrayList<>();
-    private UserListItem[] users = {new UserListItem("用户信息", R.drawable.ic_user_info),
-            new UserListItem("订单", R.drawable.ic_user_order),
-            new UserListItem("设置", R.drawable.ic_user_setting),
-            new UserListItem("退出", R.drawable.ic_user_exit)};
 
     private List<SightTestItem> sightTestItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
@@ -115,6 +116,17 @@ public class FragmentContainer extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         sightAdapter = new SightFragmentAdapter(sightTestItemList);
         recyclerView.setAdapter(sightAdapter);
+        sightAdapter.setOnItemClickListener(new SightFragmentAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                Toast.makeText(getActivity(), "you click " + position, Toast.LENGTH_SHORT).show();
+                intent = new Intent(getActivity(), Collapsing_Sight_Activity.class);
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItemList.get(position).getName());
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItemList.get(position).getImageId());
+                getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(0, 0);
+            }
+        });
     }
 
     private void initTravel(View view) {
@@ -135,6 +147,24 @@ public class FragmentContainer extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         userAdapter = new UserFragmentAdapter(userListItemList);
         recyclerView.setAdapter(userAdapter);
+
+        userAdapter.setOnItemClickListener(new UserFragmentAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                switch (position) {
+                    case 0:
+                    case 3:
+                        SharedPreferences.Editor editor = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE).edit();
+                        editor.putInt("loginStatus", 0);
+                        editor.apply();
+
+                        Toast.makeText(getActivity(), R.string.login_out, Toast.LENGTH_SHORT).show();
+
+                        intent = new Intent(getActivity(), LoginActivity.class);
+                        getActivity().startActivity(intent);
+                }
+            }
+        });
     }
 
     /**
@@ -181,6 +211,16 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initUserList() {
+        String info = getActivity().getString(R.string.user_info);
+        String order = getActivity().getString(R.string.user_order);
+        String setting = getActivity().getString(R.string.user_setting);
+        String exit = getActivity().getString(R.string.user_exit);
+        UserListItem[] users = {
+                new UserListItem(info, R.drawable.ic_user_info),
+                new UserListItem(order, R.drawable.ic_user_order),
+                new UserListItem(setting, R.drawable.ic_user_setting),
+                new UserListItem(exit, R.drawable.ic_user_exit)};
+
         if (isLogin()) {
             userListItemList.add(users[0]);
             userListItemList.add(users[1]);

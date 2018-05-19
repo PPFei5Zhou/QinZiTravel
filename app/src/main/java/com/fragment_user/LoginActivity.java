@@ -3,10 +3,12 @@ package com.fragment_user;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteConstraintException;
+import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -23,9 +25,11 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -204,6 +208,11 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             // form field with an error.
             focusView.requestFocus();
         } else {
+            //hide input keyboard
+            InputMethodManager imm =(InputMethodManager)getSystemService(
+                    Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(mPasswordView.getWindowToken(), 0);
+
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
@@ -350,12 +359,16 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
             try {
                 if (users.get(0).getPhone().equals(mEmail)) {
-                    Log.d(TAG, "===================>mEmail is True");
+//                    Log.d(TAG, "===================>mEmail is True");
                     if (users.get(0).getPassword().equals(mPassword)) {
                         SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
                         editor.putInt("loginStatus", 1);
                         editor.apply();
-                        Log.d(TAG, "===================>mPassword is True");
+//                        Log.d(TAG, "===================>mPassword is True");
+                        SharedPreferences.Editor loginData = getSharedPreferences("loginData", MODE_PRIVATE).edit();
+                        loginData.putBoolean("isLogin", true);
+                        loginData.putString("username", mEmailView.getText().toString());
+                        loginData.apply();
                         return true;
                     }
                     FLAG = 1;
@@ -374,7 +387,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             if (success) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish();
                 overridePendingTransition(0, 0);
             } else if (FLAG == 0){
                 mEmailView.requestFocus();
@@ -415,6 +427,61 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             user1.setUseraddress("GuiLin China");
             user1.setUsertype(1);
             user1.save();
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        // TODO Auto-generated method stub
+        if(ev.getAction() == MotionEvent.ACTION_DOWN) {
+            View view = getCurrentFocus();
+            if(isHideInput(view, ev)) {
+                HideSoftInput(view.getWindowToken());
+            }
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+    // 判定是否需要隐藏
+    private boolean isHideInput(View v, MotionEvent ev) {
+        if(v != null && (v instanceof EditText)) {
+            int[] l = {0, 0};
+            v.getLocationInWindow(l);
+            int left = l[0];
+            int top = l[1];
+            int bottom = top + v.getHeight();
+            int right = left + v.getWidth();
+            if(ev.getX() > left && ev.getX() < right && ev.getY() > top && ev.getY() < bottom) {
+                return false;
+            }else {
+                return true;
+            }
+        }
+        return false;
+    }
+    // 隐藏软键盘
+    private void HideSoftInput(IBinder token) {
+        if(token != null) {
+            InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(token, InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+        SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);
+        boolean isLogin = pref.getBoolean("isLogin", false);
+        Log.d(TAG, "===================>isLogin: " + isLogin);
+        if (!isLogin) {
+            Log.d(TAG, "===================>isLogin: " + pref.getString("username", ""));
+            mEmailView.setText(pref.getString("username", ""));
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
     }
 }
 

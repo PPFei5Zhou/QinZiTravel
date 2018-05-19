@@ -18,4 +18,8 @@
     <string name="error_password_required">需要填写密码</string>
     <string name="permission_rationale" translatable="false">需要获取读取联系人权限</string>
     <string name="error_incorrect_email" translatable="false">账号不存在</string>
+    <string name="user_info">User Info</string>
+    <string name="user_order">Order</string>
+    <string name="user_setting">Setting</string>
+    <string name="user_exit">Exit</string>
 </resources>

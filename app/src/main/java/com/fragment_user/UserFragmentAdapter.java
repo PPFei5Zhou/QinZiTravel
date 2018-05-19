@@ -29,11 +29,19 @@ public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapte
     private static final String TAG = "UserFragmentAdapter";
 
     private Context mContext;
-    private Intent intent;
 
     private View view;
 
     private List<UserListItem> mUserList;
+
+    private OnItemClickListener mOnItemClickListener;
+
+    public interface OnItemClickListener{
+        void onClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener ){
+        this.mOnItemClickListener = onItemClickListener;
+    }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         LinearLayout linearLayout;
@@ -60,52 +68,24 @@ public class UserFragmentAdapter extends RecyclerView.Adapter<UserFragmentAdapte
         }
         view = LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
 
-        final ViewHolder holder = new ViewHolder(view);
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = holder.getAdapterPosition();
-                UserListItem userListItem = mUserList.get(position);
-                Log.d(TAG, "onClick: " + userListItem.getUser_text());
-                switch (userListItem.getUser_text()) {
-                    case "用户信息":
-                        Log.d(TAG, "switch " + userListItem.getUser_text());
-                        break;
-                    case "订单":
-                        Log.d(TAG, "switch " + userListItem.getUser_text());
-                        break;
-                    case "设置":
-                        Log.d(TAG, "switch " + userListItem.getUser_text());
-                        break;
-                    case "退出":
-                        Log.d(TAG, "switch " + userListItem.getUser_text());
-                        SharedPreferences.Editor editor = mContext.getSharedPreferences("loginStatus", Context.MODE_PRIVATE).edit();
-                        editor.putInt("loginStatus", 0);
-                        editor.apply();
-
-                        // test log
-                        SharedPreferences pref = mContext.getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
-                        int loginStatus = pref.getInt("loginStatus", 0);
-                        Log.d(TAG, "======================================>login status is " + loginStatus);
-
-                        Toast.makeText(mContext, R.string.login_out, Toast.LENGTH_SHORT).show();
-
-                        intent = new Intent(mContext, LoginActivity.class);
-                        mContext.startActivity(intent);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        return holder;
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         UserListItem userListItem = mUserList.get(position);
         holder.user_image.setImageResource(userListItem.getImageId());
         holder.user_text.setText(userListItem.getUser_text());
+
+        if (mOnItemClickListener != null) {
+            holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.onClick(position);
+                }
+            });
+        }
     }
 
     @Override
