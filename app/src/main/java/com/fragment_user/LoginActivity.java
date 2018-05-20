@@ -95,6 +95,14 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         });
         populateAutoComplete();
 
+        SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);
+        boolean isLogin = pref.getBoolean("isLogin", false);
+        Log.d(TAG, "===================>isLogin: " + isLogin);
+        if (!isLogin) {
+            Log.d(TAG, "===================>isLogin: " + pref.getString("username", ""));
+            mEmailView.setText(pref.getString("username", ""));
+        }
+
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -463,19 +471,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         if(token != null) {
             InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             manager.hideSoftInputFromWindow(token, InputMethodManager.HIDE_NOT_ALWAYS);
-        }
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG, "onStart");
-        SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);
-        boolean isLogin = pref.getBoolean("isLogin", false);
-        Log.d(TAG, "===================>isLogin: " + isLogin);
-        if (!isLogin) {
-            Log.d(TAG, "===================>isLogin: " + pref.getString("username", ""));
-            mEmailView.setText(pref.getString("username", ""));
         }
     }
 

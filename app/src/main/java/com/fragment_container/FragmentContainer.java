@@ -152,7 +152,6 @@ public class FragmentContainer extends Fragment {
             @Override
             public void onClick(int position) {
                 switch (position) {
-                    case 0:
                     case 3:
                         SharedPreferences.Editor editor = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE).edit();
                         editor.putInt("loginStatus", 0);
@@ -162,6 +161,9 @@ public class FragmentContainer extends Fragment {
 
                         intent = new Intent(getActivity(), LoginActivity.class);
                         getActivity().startActivity(intent);
+                        getActivity().overridePendingTransition(0, 0);
+                        getActivity().finish();
+                        break;
                 }
             }
         });
