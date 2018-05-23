@@ -3,18 +3,18 @@ package com.Entity;
 import org.litepal.crud.DataSupport;
 
 public class Sight extends DataSupport {
-    private int sightid;
+    private int id;
     private String sightname;
     private double price;
     private String sightaddress;
     private String content;
 
-    public int getSightid() {
-        return sightid;
+    public int getid() {
+        return id;
     }
 
-    public void setSightid(int sightid) {
-        this.sightid = sightid;
+    public void setid(int id) {
+        this.id = id;
     }
 
     public String getSightname() {

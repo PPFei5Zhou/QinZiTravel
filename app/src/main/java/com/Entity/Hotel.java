@@ -3,18 +3,18 @@ package com.Entity;
 import org.litepal.crud.DataSupport;
 
 public class Hotel extends DataSupport {
-    private int hotelid;
+    private int id;
     private String hotelname;
     private double hotelprice;
     private String hoteladdress;
     private String hotelcontent;
 
-    public int getHotelid() {
-        return hotelid;
+    public int getid() {
+        return id;
     }
 
-    public void setHotelid(int hotelid) {
-        this.hotelid = hotelid;
+    public void setid(int hotelid) {
+        this.id = id;
     }
 
     public String getHotelname() {

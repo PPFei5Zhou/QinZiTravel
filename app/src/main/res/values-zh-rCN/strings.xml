@@ -10,6 +10,7 @@
     <string name="prompt_email" translatable="false">账号</string>
     <string name="prompt_password" translatable="false">密码</string>
     <string name="action_sign_in" translatable="false">登录</string>
+    <string name="action_sign_up" translatable="false">注册</string>
     <string name="action_sign_in_short" translatable="false">登录</string>
     <string name="error_invalid_email" translatable="false">账号不是11位号码或不是手机号、邮箱</string>
     <string name="error_invalid_password" translatable="false">密码太短或是纯字母和纯数字组成</string>
@@ -18,8 +19,18 @@
     <string name="error_password_required">需要填写密码</string>
     <string name="permission_rationale" translatable="false">需要获取读取联系人权限</string>
     <string name="error_incorrect_email" translatable="false">账号不存在</string>
-    <string name="user_info">User Info</string>
-    <string name="user_order">Order</string>
-    <string name="user_setting">Setting</string>
-    <string name="user_exit">Exit</string>
+    <string name="user_info">用户信息</string>
+    <string name="user_order">用户订单</string>
+    <string name="user_setting">设置</string>
+    <string name="user_exit">退出</string>
+    <string name="register_username">用户名称</string>
+    <string name="register_phone">手机号码</string>
+    <string name="register_email">电子邮箱地址</string>
+    <string name="register_password">密码</string>
+    <string name="register_address">地址</string>
+    <string name="register_type">用户类型</string>
+    <string name="error_address_required">地址为空</string>
+    <string name="error_phone_required" >手机号码为空</string>
+    <string name="error_invalid_phone" >手机号码格式错误</string>
+    <string name="error_username_required" >用户名为空</string>
 </resources>

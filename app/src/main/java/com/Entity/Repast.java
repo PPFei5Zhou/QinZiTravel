@@ -3,18 +3,18 @@ package com.Entity;
 import org.litepal.crud.DataSupport;
 
 public class Repast extends DataSupport {
-    private int repastid;
+    private int id;
     private String repastname;
     private double repastprice;
     private String repastaddress;
     private String repastcontent;
 
-    public int getRepastid() {
-        return repastid;
+    public int getid() {
+        return id;
     }
 
-    public void setRepastid(int repastid) {
-        this.repastid = repastid;
+    public void setid(int rid) {
+        this.id = id;
     }
 
     public String getRepastname() {

@@ -37,7 +37,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import com.Entity.User;
@@ -68,9 +67,12 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
      */
     private UserLoginTask mAuthTask = null;
 
+    private Intent intent;
+
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+    private TextView mSignUpView;
     private View mProgressView;
     private View mLoginFormView;
 
@@ -125,6 +127,16 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        mSignUpView = findViewById(R.id.email_sign_up_text);
+        mSignUpView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                overridePendingTransition(0, 0);
+                startActivity(intent);
+            }
+        });
     }
 
     private void populateAutoComplete() {
@@ -232,7 +244,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     private boolean isUsrNameValid(String usrName) {
         // match email address and phone number
         String regex = "^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$";
-        return usrName.matches(regex);
+        return usrName.matches(regex) || usrName.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
@@ -357,18 +369,17 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 return false;
             }
 
-            List<User> users = DataSupport.select("phone", "password")
-                    .where("phone = ?", mEmail)
+            List<User> phone = DataSupport.select("phone", "password")
+                    .where("phone = ? ", mEmail)
+                    .find(User.class);
+            List<User> email = DataSupport.select("email", "password")
+                    .where("email = ?", mEmail)
                     .find(User.class);
 
-//            Log.d(TAG, "===================> " + users.toString());
-//            Log.d(TAG, "===================> " + users.get(0).getPhone());
-//            Log.d(TAG, "===================> " + users.get(0).getPassword());
-
             try {
-                if (users.get(0).getPhone().equals(mEmail)) {
+                if (phone.get(0).getPhone().equals(mEmail)) {
 //                    Log.d(TAG, "===================>mEmail is True");
-                    if (users.get(0).getPassword().equals(mPassword)) {
+                    if (phone.get(0).getPassword().equals(mPassword)) {
                         SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
                         editor.putInt("loginStatus", 1);
                         editor.apply();
@@ -393,7 +404,10 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
+                editor.putInt("loginStatus", 1);
+                editor.apply();
+                intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
                 finish();
@@ -420,22 +434,24 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     }
 
     private void InitUserData() {
-            User user = new User();
-            user.setuserid(0);
-            user.setUsername("admin1");
-            user.setPassword("admin1");
-            user.setPhone("15677777777");
-            user.setUseraddress("GuiLin China");
-            user.setUsertype(0);
-            user.save();
-            User user1 = new User();
-            user1.setuserid(1);
-            user1.setUsername("test");
-            user1.setPassword("test11");
-            user1.setPhone("18677777777");
-            user1.setUseraddress("GuiLin China");
-            user1.setUsertype(1);
-            user1.save();
+//        User user = new User();
+//        user.setId(0);
+//        user.setUsername("admin1");
+//        user.setPassword("admin1");
+//        user.setPhone("15677777777");
+//        user.setEmail("hello@world.com");
+//        user.setUseraddress("GuiLin China");
+//        user.setUsertype(0);
+//        user.save();
+//        User user1 = new User();
+//        user1.setId(1);
+//        user1.setUsername("test");
+//        user1.setPassword("test11");
+//        user1.setPhone("18677777777");
+//        user1.setEmail("world@hello.com");
+//        user1.setUseraddress("GuiLin China");
+//        user1.setUsertype(1);
+//        user1.save();
     }
 
     @Override

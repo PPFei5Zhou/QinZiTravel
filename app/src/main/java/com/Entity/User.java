@@ -4,8 +4,7 @@ import org.litepal.annotation.Column;
 import org.litepal.crud.DataSupport;
 
 public class User extends DataSupport {
-    @Column(unique = true, nullable = false)
-    private int userid;
+    private int id;
 
     @Column(nullable = false)
     private String username;
@@ -18,14 +17,25 @@ public class User extends DataSupport {
     @Column(unique = true, nullable = false)
     private String phone;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
     private int usertype;
 
-    public int getuserid() {
-        return userid;
+    public int getId() {
+        return id;
     }
 
-    public void setuserid(int userid) {
-        this.userid = userid;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
