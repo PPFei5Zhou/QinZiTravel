@@ -4,20 +4,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.Entity.SightTestItem;
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.MapView;
+import com.amap.api.maps.MapsInitializer;
+import com.amap.api.maps.SupportMapFragment;
+import com.amap.api.maps.UiSettings;
 import com.fragment_sight.Collapsing_Sight_Activity;
 import com.fragment_sight.SightFragmentAdapter;
 import com.fragment_user.LoginActivity;
@@ -49,6 +55,9 @@ public class FragmentContainer extends Fragment {
             new SightTestItem("test4", R.drawable.test4),
             new SightTestItem("test5", R.drawable.test5)};
 
+    private MapView mMapView;
+    private AMap mAmap;
+
     public static FragmentContainer newInstance(int index) {
         FragmentContainer fragmentContainer = new FragmentContainer();
         Bundle b = new Bundle();
@@ -77,22 +86,43 @@ public class FragmentContainer extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
         if (getArguments().getInt("index", 0) == 0) {
+            Log.d(TAG, "==========================>onCreateView: sight");
             View view = inflater.inflate(R.layout.fragment_sight, container, false);
             initSight(view);
             return view;
         } else if (getArguments().getInt("index", 1) == 1) {
+            Log.d(TAG, "==========================>onCreateView: travel");
             View view = inflater.inflate(R.layout.fragment_travel, container, false);
-            initTravel(view);
+            mMapView = view.findViewById(R.id.map);
+            mMapView.onCreate(savedInstanceState);
+//            if (mAmap == null) {
+//                mAmap = mMapView.getMap();
+//            }
+            FragmentManager fragmentManager = getChildFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            try {
+                MapsInitializer.initialize(getContext());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            SupportMapFragment supportMapFragment = new SupportMapFragment();
+            transaction.replace(R.id.map, supportMapFragment);
+            transaction.commit();
+            mAmap = supportMapFragment.getMap();
+
             return view;
         } else if (getArguments().getInt("index", 2) == 2) {
+            Log.d(TAG, "==========================>onCreateView: hotel");
             View view = inflater.inflate(R.layout.fragment_repast, container, false);
             initRepast(view);
             return view;
         } else if (getArguments().getInt("index", 3) == 3) {
+            Log.d(TAG, "==========================>onCreateView: repast");
             View view = inflater.inflate(R.layout.fragment_hotel, container, false);
             initHotel(view);
             return view;
         } else {
+            Log.d(TAG, "==========================>onCreateView: user");
             View view = inflater.inflate(R.layout.fragment_user, container, false);
             initUser(view);
             return view;
@@ -127,9 +157,6 @@ public class FragmentContainer extends Fragment {
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
-    }
-
-    private void initTravel(View view) {
     }
 
     private void initRepast(View view) {
