@@ -95,9 +95,6 @@ public class FragmentContainer extends Fragment {
             View view = inflater.inflate(R.layout.fragment_travel, container, false);
             mMapView = view.findViewById(R.id.map);
             mMapView.onCreate(savedInstanceState);
-//            if (mAmap == null) {
-//                mAmap = mMapView.getMap();
-//            }
             FragmentManager fragmentManager = getChildFragmentManager();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             try {
