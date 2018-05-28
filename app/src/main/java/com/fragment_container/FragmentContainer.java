@@ -2,7 +2,6 @@ package com.fragment_container;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.support.annotation.Nullable;
@@ -28,6 +27,7 @@ import com.fragment_sight.SightFragmentAdapter;
 import com.fragment_user.LoginActivity;
 import com.fragment_user.UserFragmentAdapter;
 import com.Entity.UserListItem;
+import com.fragment_user.UserInfoActivity;
 import com.qinzitravel.R;
 
 import java.util.ArrayList;
@@ -172,17 +172,21 @@ public class FragmentContainer extends Fragment {
             @Override
             public void onClick(int position) {
                 switch (position) {
+                    case 0:
+                        intent = getActivity().getIntent();
+                        String userPhone = intent.getStringExtra("loginData");
+                        Toast.makeText(getContext(), "logingData is: " + userPhone, Toast.LENGTH_SHORT).show();
+                        intent = new Intent(getActivity(), UserInfoActivity.class);
+                        getActivity().overridePendingTransition(0, 0);
+                        intent.putExtra("userPhone", userPhone);
+                        getActivity().startActivity(intent);
+                        break;
                     case 3:
-                        SharedPreferences.Editor editor = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE).edit();
-                        editor.putInt("loginStatus", 0);
-                        editor.apply();
-
                         Toast.makeText(getActivity(), R.string.login_out, Toast.LENGTH_SHORT).show();
 
                         intent = new Intent(getActivity(), LoginActivity.class);
                         getActivity().startActivity(intent);
                         getActivity().overridePendingTransition(0, 0);
-                        getActivity().finish();
                         break;
                 }
             }
@@ -224,8 +228,8 @@ public class FragmentContainer extends Fragment {
          * check user login status
          * @return true is login
          */
-        SharedPreferences pref = getActivity().getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
-        int loginStatus = pref.getInt("loginStatus", 0);
+        intent = getActivity().getIntent();
+        int loginStatus = intent.getIntExtra("loginStatus", 0);
         if (loginStatus == 1) {
             return true;
         }

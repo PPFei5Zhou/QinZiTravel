@@ -47,7 +47,7 @@
     <string name="title_notifications">Notifications</string>
 
     <!-- Collapsing_Sight_Activity -->
-    <string name="sight_info_1" >日月双塔，建成于2002年，是在唐代佛塔基础上于2001年重建的，地处桂林市中心区，坐落在桂林城的中轴线、桂林杉湖岛上，与“象山水月”相邻。象山是桂林的城徽，而双塔则是新桂林的标识。日塔、月塔与象山上的普贤塔、塔山上的寿佛塔，相互呼应，相互映衬，有“四塔同美”之说。
+    <string name="sight_info_1">日月双塔，建成于2002年，是在唐代佛塔基础上于2001年重建的，地处桂林市中心区，坐落在桂林城的中轴线、桂林杉湖岛上，与“象山水月”相邻。象山是桂林的城徽，而双塔则是新桂林的标识。日塔、月塔与象山上的普贤塔、塔山上的寿佛塔，相互呼应，相互映衬，有“四塔同美”之说。
 日月双塔号称世界第一铜塔，是桂林旅游的一个夜景观赏地。其中日塔高41米共九层，通体均为纯铜装饰，耗用铜材350吨，并有电梯供游客观光乘坐。
 铜塔所有构件如塔什、瓦面、翘角、斗拱、雀替、门窗、柱梁、天面、地面完全由铜壁画装饰，整座铜塔创下了三项世界之最—世界上最高的铜塔，世界上最高的铜质建筑物，世界上最高的水中塔。
 月塔高35米共七层，为琉璃塔。每层的雕花彩绘门窗寓意不同的主题，富含中国传统韵味，通过水下18米长的水族馆与日塔连接，其地宫之中有桂林明代青花梅瓶大型壁画。</string>
@@ -71,4 +71,10 @@
     <string name="sight_info_5">遇龙河 （活动时间约50分钟）【遇龙河竹筏】，遇龙河是漓江在阳朔境内的一条支流，河水清澈如镜，随手就能拍出山水画般的照片。与漓江风光相比，遇龙河的风景更温婉，有“小漓江”之称。泛舟遇龙河上,溪水潺潺，竹影婆娑，青峰倒影，渔歌淼淼，体味“舟行碧波上，人在画中游”的美妙情结。美国哈佛大学学者卡尔来到此地，也惊呼：这是中国美丽的地方！</string>
     <string name="sight_price_5">价格： ￥ 555</string>
     <string name="sight_address_5">地址：</string>
+
+    <!-- UserInfoActivity -->
+    <string name="user_info_name">user name:</string>
+    <string name="user_info_phone">user phone:</string>
+    <string name="user_info_email">user email:</string>
+    <string name="user_info_address">user address:</string>
 </resources>

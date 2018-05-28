@@ -380,14 +380,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 if (phone.get(0).getPhone().equals(mEmail)) {
 //                    Log.d(TAG, "===================>mEmail is True");
                     if (phone.get(0).getPassword().equals(mPassword)) {
-                        SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
-                        editor.putInt("loginStatus", 1);
-                        editor.apply();
 //                        Log.d(TAG, "===================>mPassword is True");
-                        SharedPreferences.Editor loginData = getSharedPreferences("loginData", MODE_PRIVATE).edit();
-                        loginData.putBoolean("isLogin", true);
-                        loginData.putString("username", "");
-                        loginData.apply();
                         return true;
                     }
                     FLAG = 1;
@@ -404,10 +397,9 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             showProgress(false);
 
             if (success) {
-                SharedPreferences.Editor editor = getSharedPreferences("loginStatus", MODE_PRIVATE).edit();
-                editor.putInt("loginStatus", 1);
-                editor.apply();
                 intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("loginStatus", 1);
+                intent.putExtra("loginData", mEmail);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
                 finish();
