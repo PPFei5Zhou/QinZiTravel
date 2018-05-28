@@ -23,7 +23,6 @@ import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.MapsInitializer;
 import com.amap.api.maps.SupportMapFragment;
-import com.amap.api.maps.UiSettings;
 import com.fragment_sight.Collapsing_Sight_Activity;
 import com.fragment_sight.SightFragmentAdapter;
 import com.fragment_user.LoginActivity;
@@ -33,7 +32,6 @@ import com.qinzitravel.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class FragmentContainer extends Fragment {
 
@@ -49,14 +47,14 @@ public class FragmentContainer extends Fragment {
 
     private List<SightTestItem> sightTestItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
-    private SightTestItem[] items = {new SightTestItem("test1", R.drawable.test1),
-            new SightTestItem("test2", R.drawable.test2),
-            new SightTestItem("test3", R.drawable.test3),
-            new SightTestItem("test4", R.drawable.test4),
-            new SightTestItem("test5", R.drawable.test5)};
+    private SightTestItem[] items = {new SightTestItem("sight1", R.drawable.sight_picture_1),
+            new SightTestItem("sight2", R.drawable.sight_picture_2),
+            new SightTestItem("sight3", R.drawable.sight_picture_3),
+            new SightTestItem("sight4", R.drawable.sight_picture_4),
+            new SightTestItem("sight5", R.drawable.sight_picture_5)};
 
-    private MapView mMapView;
-    private AMap mAmap;
+    MapView mMapView;
+    AMap mAmap;
 
     public static FragmentContainer newInstance(int index) {
         FragmentContainer fragmentContainer = new FragmentContainer();
@@ -129,10 +127,8 @@ public class FragmentContainer extends Fragment {
     private void initSight(View view) {
 
         sightTestItemList.clear();
-        for (int i = 0; i < 50; i++) {
-            Random random = new Random();
-            int index = random.nextInt(items.length);
-            sightTestItemList.add(items[index]);
+        for (int i = 0; i < items.length; i++) {
+            sightTestItemList.add(items[i]);
         }
 
         fragmentContainer = view.findViewById(R.id.fragment_sight);

@@ -20,6 +20,8 @@ public class Collapsing_Sight_Activity extends BaseActivity {
     private android.support.v7.widget.Toolbar toolbar;
     private CollapsingToolbarLayout collapsingToolbar;
     private ImageView sightImageView;
+    private TextView sightPrice;
+    private TextView sightAddress;
     private TextView sightContent;
 
     @Override
@@ -34,22 +36,88 @@ public class Collapsing_Sight_Activity extends BaseActivity {
         toolbar = findViewById(R.id.toolbar);
         collapsingToolbar = findViewById(R.id.collapsing_toolbar);
         sightImageView = findViewById(R.id.sight_image_view);
+        sightPrice = findViewById(R.id.sight_price);
+        sightAddress = findViewById(R.id.sight_address);
         sightContent = findViewById(R.id.sight_content);
+
         setSupportActionBar(toolbar);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
         collapsingToolbar.setTitle(sightName);
         Glide.with(this).load(sightImageId).into(sightImageView);
+        String sightPricesText = generateSightPrice(sightName);
+        String sightAddressText = generateSightAddress(sightName);
         String sightContentText = generateSightContent(sightName);
+        sightPrice.setText(sightPricesText);
+        sightAddress.setText(sightAddressText);
         sightContent.setText(sightContentText);
     }
 
     private String generateSightContent(String sightName) {
         StringBuilder sightContent = new StringBuilder();
-        for (int i = 0; i < 500; i++) {
-            sightContent.append(sightName);
+        switch (sightName) {
+            case "sight1":
+                sightContent.append(getString(R.string.sight_info_1));
+                break;
+            case "sight2":
+                sightContent.append(getString(R.string.sight_info_2));
+                break;
+            case "sight3":
+                sightContent.append(getString(R.string.sight_info_3));
+                break;
+            case "sight4":
+                sightContent.append(getString(R.string.sight_info_4));
+                break;
+            case "sight5":
+                sightContent.append(getString(R.string.sight_info_5));
+                break;
+        }
+        return sightContent.toString();
+    }
+
+    private String generateSightPrice(String sightName) {
+        StringBuilder sightContent = new StringBuilder();
+        switch (sightName) {
+            case "sight1":
+                sightContent.append(getString(R.string.sight_price_1));
+                break;
+            case "sight2":
+                sightContent.append(getString(R.string.sight_price_2));
+                break;
+            case "sight3":
+                sightContent.append(getString(R.string.sight_price_3));
+                break;
+            case "sight4":
+                sightContent.append(getString(R.string.sight_price_4));
+                break;
+            case "sight5":
+                sightContent.append(getString(R.string.sight_price_5));
+                break;
+        }
+        return sightContent.toString();
+    }
+
+    private String generateSightAddress(String sightName) {
+        StringBuilder sightContent = new StringBuilder();
+        switch (sightName) {
+            case "sight1":
+                sightContent.append(getString(R.string.sight_address_1));
+                break;
+            case "sight2":
+                sightContent.append(getString(R.string.sight_address_2));
+                break;
+            case "sight3":
+                sightContent.append(getString(R.string.sight_address_3));
+                break;
+            case "sight4":
+                sightContent.append(getString(R.string.sight_address_4));
+                break;
+            case "sight5":
+                sightContent.append(getString(R.string.sight_address_5));
+                break;
         }
         return sightContent.toString();
     }
@@ -70,8 +138,6 @@ public class Collapsing_Sight_Activity extends BaseActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(Collapsing_Sight_Activity.this, MainActivity.class);
-        startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         finish();
     }
