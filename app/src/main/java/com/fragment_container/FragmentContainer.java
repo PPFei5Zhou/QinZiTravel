@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.Entity.SightTestItem;
+import com.Entity.TestItem;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.MapsInitializer;
@@ -45,13 +45,13 @@ public class FragmentContainer extends Fragment {
     private UserFragmentAdapter userAdapter;
     List<UserListItem> userListItemList = new ArrayList<>();
 
-    private List<SightTestItem> sightTestItemList = new ArrayList<>();
+    private List<TestItem> testItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
-    private SightTestItem[] items = {new SightTestItem("sight1", R.drawable.sight_picture_1),
-            new SightTestItem("sight2", R.drawable.sight_picture_2),
-            new SightTestItem("sight3", R.drawable.sight_picture_3),
-            new SightTestItem("sight4", R.drawable.sight_picture_4),
-            new SightTestItem("sight5", R.drawable.sight_picture_5)};
+    private TestItem[] items = {new TestItem("南宁万达乐园", R.drawable.sight_1),
+            new TestItem("卡乐星球", R.drawable.sight_2),
+            new TestItem("欢乐城堡儿童乐园", R.drawable.sight_3),
+            new TestItem("马尔代夫水上乐园", R.drawable.sight_4),
+            new TestItem("积木创意乐园", R.drawable.sight_5)};
 
     MapView mMapView;
     AMap mAmap;
@@ -126,9 +126,9 @@ public class FragmentContainer extends Fragment {
 
     private void initSight(View view) {
 
-        sightTestItemList.clear();
+        testItemList.clear();
         for (int i = 0; i < items.length; i++) {
-            sightTestItemList.add(items[i]);
+            testItemList.add(items[i]);
         }
 
         fragmentContainer = view.findViewById(R.id.fragment_sight);
@@ -137,15 +137,16 @@ public class FragmentContainer extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
-        sightAdapter = new SightFragmentAdapter(sightTestItemList);
+        sightAdapter = new SightFragmentAdapter(testItemList);
         recyclerView.setAdapter(sightAdapter);
         sightAdapter.setOnItemClickListener(new SightFragmentAdapter.OnItemClickListener() {
             @Override
             public void onClick(int position) {
                 Toast.makeText(getActivity(), "you click " + position, Toast.LENGTH_SHORT).show();
                 intent = new Intent(getActivity(), Collapsing_Sight_Activity.class);
-                intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, sightTestItemList.get(position).getName());
-                intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, sightTestItemList.get(position).getImageId());
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_NAME, testItemList.get(position).getName());
+                intent.putExtra(Collapsing_Sight_Activity.SIGHT_IMAGE_ID, testItemList.get(position).getImageId());
+                intent.putExtra("position", position);
                 getActivity().startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }

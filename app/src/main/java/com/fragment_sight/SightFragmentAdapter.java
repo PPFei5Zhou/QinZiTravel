@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.Entity.SightTestItem;
+import com.Entity.TestItem;
 import com.bumptech.glide.Glide;
 import com.qinzitravel.R;
 
@@ -21,7 +21,7 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
 
     private Context mContext;
 
-    private List<SightTestItem> mSightTestItem;
+    private List<TestItem> mTestItem;
 
     private OnItemClickListener mOnItemClickListener;
 
@@ -45,8 +45,8 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
         }
     }
 
-    public SightFragmentAdapter(List<SightTestItem> itemList) {
-        mSightTestItem = itemList;
+    public SightFragmentAdapter(List<TestItem> itemList) {
+        mTestItem = itemList;
     }
 
     @Override
@@ -61,9 +61,9 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        SightTestItem sightTestItem = mSightTestItem.get(position);
-        holder.itemName.setText(sightTestItem.getName());
-        Glide.with(mContext).load(sightTestItem.getImageId()).into(holder.itemImage);
+        TestItem testItem = mTestItem.get(position);
+        holder.itemName.setText(testItem.getName());
+        Glide.with(mContext).load(testItem.getImageId()).into(holder.itemImage);
 
         if (mOnItemClickListener != null) {
             holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +78,6 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
 
     @Override
     public int getItemCount() {
-        return mSightTestItem.size();
+        return mTestItem.size();
     }
 }
