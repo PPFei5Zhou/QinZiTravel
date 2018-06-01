@@ -55,7 +55,7 @@ public class SightFragmentAdapter extends RecyclerView.Adapter<SightFragmentAdap
             mContext = parent.getContext();
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.test_item, parent, false);
-        final ViewHolder holder = new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 

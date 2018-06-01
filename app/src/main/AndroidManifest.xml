@@ -40,12 +40,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name="com.fragment_sight.Collapsing_Sight_Activity"
-            android:theme="@style/fragmentTheme"></activity>
-        <activity android:name="com.fragment_user.SignUpActivity"></activity>
-        <activity android:name="com.fragment_user.UserInfoActivity"></activity>
+            android:theme="@style/fragmentTheme" />
+        <activity android:name="com.fragment_user.SignUpActivity" />
+        <activity android:name="com.fragment_user.UserInfoActivity" />
+        <activity
+            android:name="com.fragment_hotel.Collapsing_Hotel_Activity"
+            android:theme="@style/fragmentTheme">
+        </activity>
     </application>
 
 </manifest>

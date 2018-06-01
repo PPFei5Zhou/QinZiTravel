@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.activity_collector.BaseActivity;
 import com.bumptech.glide.Glide;
-import com.qinzitravel.MainActivity;
 import com.qinzitravel.R;
 
 public class Collapsing_Sight_Activity extends BaseActivity {
@@ -17,12 +16,12 @@ public class Collapsing_Sight_Activity extends BaseActivity {
     public static final String SIGHT_NAME = "sight_name";
     public static final String SIGHT_IMAGE_ID = "sight_image_id";
 
-    private android.support.v7.widget.Toolbar toolbar;
-    private CollapsingToolbarLayout collapsingToolbar;
-    private ImageView sightImageView;
-    private TextView sightPrice;
-    private TextView sightAddress;
-    private TextView sightContent;
+    android.support.v7.widget.Toolbar toolbar;
+    CollapsingToolbarLayout collapsingToolbar;
+    ImageView sightImageView;
+    TextView sightPrice;
+    TextView sightAddress;
+    TextView sightContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +33,8 @@ public class Collapsing_Sight_Activity extends BaseActivity {
         int sightImageId = intent.getIntExtra(SIGHT_IMAGE_ID, 0);
         int position = intent.getIntExtra("position", 0);
 
-        toolbar = findViewById(R.id.toolbar);
-        collapsingToolbar = findViewById(R.id.collapsing_toolbar);
+        toolbar = findViewById(R.id.sight_toolbar);
+        collapsingToolbar = findViewById(R.id.sight_collapsing_toolbar);
         sightImageView = findViewById(R.id.sight_image_view);
         sightPrice = findViewById(R.id.sight_price);
         sightAddress = findViewById(R.id.sight_address);

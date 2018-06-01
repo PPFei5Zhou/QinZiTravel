@@ -22,6 +22,8 @@ import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.MapsInitializer;
 import com.amap.api.maps.SupportMapFragment;
+import com.fragment_hotel.Collapsing_Hotel_Activity;
+import com.fragment_hotel.HotelFragmentAdapter;
 import com.fragment_sight.Collapsing_Sight_Activity;
 import com.fragment_sight.SightFragmentAdapter;
 import com.fragment_user.LoginActivity;
@@ -47,11 +49,19 @@ public class FragmentContainer extends Fragment {
 
     private List<TestItem> testItemList = new ArrayList<>();
     private SightFragmentAdapter sightAdapter;
-    private TestItem[] items = {new TestItem("南宁万达乐园", R.drawable.sight_1),
+    private TestItem[] sightItems = {new TestItem("南宁万达乐园", R.drawable.sight_1),
             new TestItem("卡乐星球", R.drawable.sight_2),
             new TestItem("欢乐城堡儿童乐园", R.drawable.sight_3),
             new TestItem("马尔代夫水上乐园", R.drawable.sight_4),
             new TestItem("积木创意乐园", R.drawable.sight_5)};
+
+    private HotelFragmentAdapter hotelAdapter;
+    private TestItem[] hotelItems = {new TestItem("我们家●love house", R.drawable.hotel_1),
+            new TestItem("桃花江畔芦笛岩景区", R.drawable.hotel_2),
+            new TestItem("芦笛岩归禾芦庐", R.drawable.hotel_3),
+            new TestItem("奇幻主题公寓", R.drawable.hotel_4),
+            new TestItem("千岛湖独岛之墅", R.drawable.hotel_5)
+    };
 
     MapView mMapView;
     AMap mAmap;
@@ -127,8 +137,8 @@ public class FragmentContainer extends Fragment {
     private void initSight(View view) {
 
         testItemList.clear();
-        for (int i = 0; i < items.length; i++) {
-            testItemList.add(items[i]);
+        for (int i = 0; i < sightItems.length; i++) {
+            testItemList.add(sightItems[i]);
         }
 
         fragmentContainer = view.findViewById(R.id.fragment_sight);
@@ -157,6 +167,31 @@ public class FragmentContainer extends Fragment {
     }
 
     private void initHotel(View view) {
+        testItemList.clear();
+        for (int i = 0; i < hotelItems.length; i++) {
+            testItemList.add(hotelItems[i]);
+        }
+
+        fragmentContainer = view.findViewById(R.id.fragment_hotel);
+        recyclerView = view.findViewById(R.id.fragment_hotel_recycler_view);
+
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new GridLayoutManager(getActivity(), 1);
+        recyclerView.setLayoutManager(layoutManager);
+        hotelAdapter = new HotelFragmentAdapter(testItemList);
+        recyclerView.setAdapter(hotelAdapter);
+        hotelAdapter.setOnItemClickListener(new HotelFragmentAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                Toast.makeText(getActivity(), "you click" + position, Toast.LENGTH_SHORT).show();
+                intent = new Intent(getActivity(), Collapsing_Hotel_Activity.class);
+                intent.putExtra(Collapsing_Hotel_Activity.HOTEL_NAME, testItemList.get(position).getName());
+                intent.putExtra(Collapsing_Hotel_Activity.HOTEL_IMAGE_ID, testItemList.get(position).getImageId());
+                intent.putExtra("position", position);
+                getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
     }
 
     private void initUser(View view) {
